@@ -1,0 +1,182 @@
+@media(max-width:1199px) and (min-width:991px){
+    .about_section .flex_row .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem
+    }
+    .header .main_setion .main_list a{
+        padding: 0;
+        font-size: 14px;
+    }
+}
+@media (max-width:599px){
+    .blogs_section .container .blogs_swiper .single_blog,
+    .blogs_section .container .blogs_swiper .single_blog .img_Container{
+        width:320px
+    }
+    .home .content .why_dubai .black_bg{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:2rem
+    }
+}
+@media (min-width:768px) and (max-width:990px){
+    .newsletter .flex_col .form_container{
+        width:90%
+    }
+    .home .content .flex-col .title, .main_title {
+        font-size: 46px;
+    }
+    .about_section .flex_row .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem
+    }
+    .contact_whatsapp .pos.flex
+{
+    font-size: 16px;
+}
+.contact_whatsapp .pos.flex .img_container{
+    width:80px;
+    height:80px
+}
+    .home .content .why_dubai .black_bg{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem
+    }
+}
+@media (max-width:767px){
+    .newsletter .flex_col .form_container{
+        width:90%
+    }
+    .newsletter .flex_col .form_container form.form_newsletter{
+        flex-direction: column;
+    }
+    .newsletter .flex_col .form_container form.form_newsletter .submit button,
+    .newsletter .flex_col .form_container form.form_newsletter .input_container input{
+        font-size: 16px;
+    }
+    .newsletter .flex_col .form_container form.form_newsletter .input_container{
+        width:100%
+    }
+    .newsletter .flex_col .form_container form.form_newsletter .submit{
+        width: calc(100% - 2rem);
+    }
+    .blogs_section .container .blogs_swiper .single_blog .title_blog_single
+{
+    font-size: 22px;
+}
+    .testimonials_section .container .dark_bg .flex{
+        flex-direction: column;
+    }
+    .about_section .flex_row{
+        flex-direction: column;
+        gap:2rem
+    }
+    .about_section .flex_row .text_container,.about_section .flex_row .img_container,
+    .about_section .flex_row .grid{
+        width:100%
+    }
+    .testimonials_section .container .dark_bg .flex .img_container{
+        display: none;
+    }
+    .testimonials_section .container .swiper_testi{
+        width: calc(100% - 1rem);
+    }
+    .testimonials_section .container .dark_bg .flex{
+        padding: 2rem;
+    }
+    .about_section .flex_row .grid{
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+        gap:2rem
+    }
+    .about_section .flex_row .grid .col {
+        display: flex
+    ;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about_section .flex_row .text_container .title{
+        text-align: center;
+    }
+    .about_section .flex_row .text_container .flex_col,
+    .about_section .flex_row .text_container{
+      
+        justify-content: center;
+        align-items: center;
+    }
+    .contact_whatsapp .pos.flex{
+        padding: 4.6rem 2rem;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    .contact_whatsapp .pos.flex .img_container{
+        width: 80px;
+    height: 80px;
+    
+    top: -37px;
+    }
+    .services_col .grid{
+        grid-template-columns: repeat(1,1fr);
+        gap:2rem
+    }
+    .services_col .grid .col.order_ser .service .flex div {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .home .content .why_dubai .black_bg .col div{
+        font-size: 20px;
+    }
+    .banner_swiper .swiper-slide{
+        flex-direction: column;
+        gap:1.4rem
+    }
+    .banner_swiper .img_swiper,
+    .banner_swiper .text_desc{
+        width:100%
+    }
+    .banner_swiper .text_desc .title{
+        font-size: 22px;
+    }
+    .banner_swiper .text_desc{
+        gap:1rem
+    }
+    .home .content .flex-col .title, .main_title{
+        font-size: 33px;
+    }
+}
+@media (min-width:600px) and (max-width:767px){
+    .home .content .why_dubai .black_bg{
+        display: grid;
+        gap:2rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:990px){
+    .home .content .flex-col .desc{
+        font-size: 17px;
+    }
+    .about_section .flex_row .grid .col .number{
+        font-size: 38px;
+    }
+   
+    .footer .grid .col:nth-last-of-type(2){
+        margin-left: 0;
+    }
+    .footer .grid{
+        gap:2rem;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .header.desktop{
+        display: none;
+    }
+    .header.mobile{
+        display: block;
+    }
+}
