@@ -937,5 +937,93 @@ cursor: pointer;
   color: red;
     font-size: 13px;
     position: absolute;
-    
+    display: none;
+
+}
+.right-list.hidden{
+  position: fixed;
+  z-index: 1111111;
+  background: #fff;
+  height: 100%;
+  overflow-y: scroll !important;
+  width: 300px;
+  top: 0;
+  right: -30rem;
+  overflow-x: hidden;
+  transition: .5s;
+  padding: 38px 0;
+}
+.right-list a{
+  color:#fff;
+  font-size: 18px;
+  border:none;
+
+
+}
+.right-list li{
+  padding: 0.7rem 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+.right-list .flex-col{
+  display: flex;
+  flex-direction: column;
+  gap:2rem
+}
+.right-list ul{
+  padding: 0;
+  width: 85%;
+  margin: 0 auto;
+}
+.right-list .flex-col .logo_img{
+  width:120px
+}
+.main_list_mobile{
+  display: flex;
+  flex-direction: column;
+  gap:1rem
+}
+.main_list_mobile a{
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+.main_list_mobile a:hover{
+  opacity: 0.5;
+}
+ul{
+  list-style: none;
+}
+.Get_in_touch .list_column{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+
+}
+.Get_in_touch{
+  padding-top: 1rem;
+}
+.Get_in_touch .list_column .row a{
+  display: flex;
+  gap:1rem;
+ align-items: center;
+ color: rgba(0, 0, 0, 0.6);
+ font-size: 16px;
+}
+.Get_in_touch .list_column .row .img_container {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+}
+.Get_in_touch .list_column .row .img_container img{
+  width: 20px;
+}
+.Get_in_touch .text{
+  font-size: 20px;
+  font-weight: 600;
 }

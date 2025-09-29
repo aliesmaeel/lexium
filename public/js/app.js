@@ -130,8 +130,17 @@ $(document).ready(function() {
     lastScrollY = currentY;
   });
 });
-
-$('img.icon').on('click', function (event) {
+$(document).on('click', function (event) {
+  const $sidebar = $('.right-list');
+  const $svgIcon = $('img.icon');
+  if (!$sidebar.is(event.target) && $sidebar.has(event.target).length === 0 &&
+      !$svgIcon.is(event.target) && $svgIcon.has(event.target).length === 0) {
+      if ($sidebar.css('right') === '0px') {
+          $sidebar.css('right', '-30rem');
+      }
+  }
+});
+$('img.icon_logo').on('click', function (event) {
   event.stopPropagation();
   const $sidebar = $('.right-list');
 
@@ -167,7 +176,7 @@ $('.newsletter form').on('submit', function (e) {
   });
 
   if (isValid) {
-      this.submit(); // ✅ only submit if valid
+      this.submit();
   }
 });
 
