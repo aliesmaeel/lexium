@@ -49,8 +49,72 @@
                 <img src="/images/logo.png" />
             </div>
             <div class="icon">
-                <img src="/images/icon_header.svg"/>
+                <img src="/images/icon_header.svg"class="icon_logo" />
             </div>
+        </div>
+    </div>
+    <div class="right-list hidden">
+        <div class="flex-col">
+
+            <ul class="col-list">
+                <li class="link link_img">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.png" class="logo_img">
+                    </a>
+                </li>
+                <li class="desc">
+                    We must explain to you how all seds this mistakens idea denouncing 
+                    pleasures and praising account. All seds this mistakens idea denouncing pleasures.
+                
+                </li>
+                <li class="main_list_mobile">
+                    <a href="#home">Home</a>
+                    <a href="#business">Business</a>
+                    <a href="#visas-residency">Visas & Residency</a>
+                    <a href="#banking-finance">Banking & Finance</a>
+                    <a href="#services">Corporate Services</a>
+                    <a href="#industriese">Industries</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#about">About</a>
+                    <a href="#contact-us">Contact</a>
+                </li>
+                <li class="Get_in_touch">
+                    <div class="text">Get In Touch</div>
+                    <div class="list_column">
+                        <div class="row">
+                            <a href="#">
+                                <div class="img_container">
+                                    <img src="/images/phone_white.png">
+                                </div>
+                                <div class="info_desc">
+                                    <div>(+256) 2145.2156</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="#">
+                                <div class="img_container">
+                                    <img src="/images/email_white.png">
+                                </div>
+                                <div class="info_desc">
+                                    <div>info@Invena.com</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="#">
+                                <div class="img_container">
+                                    <img src="/images/location.png">
+                                </div>
+                                <div class="info_desc">
+                                        <div>XYZ Hilton Street, 125 Town United State</div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
