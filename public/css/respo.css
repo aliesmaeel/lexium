@@ -52,6 +52,7 @@
     }
     .newsletter .flex_col .form_container form.form_newsletter{
         flex-direction: column;
+        gap:1rem
     }
     .newsletter .flex_col .form_container form.form_newsletter .submit button,
     .newsletter .flex_col .form_container form.form_newsletter .input_container input{
@@ -62,6 +63,7 @@
     }
     .newsletter .flex_col .form_container form.form_newsletter .submit{
         width: calc(100% - 2rem);
+        margin-top: 1rem;
     }
     .blogs_section .container .blogs_swiper .single_blog .title_blog_single
 {

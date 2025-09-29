@@ -60,7 +60,7 @@
                         <img src="/images/icon.svg"/>
                         <div> Business Success Starts Here</div> 
                     </div>
-                    <div class="title">Start Your Business in Dubai with Confidence.</div>
+                    <div class="title" data-aos="fade-left">Start Your Business in Dubai with Confidence.</div>
                     <div class="desc">
                         Lexium Business Hub is your trusted partner for company formation, Golden Visa, and corporate services in Dubai. 
                         From business setup to banking, we simplify the process so you can focus on growth.
@@ -68,7 +68,7 @@
                     <a class="btn_link" href="#">View Services</a>
                     {{-- Why Dubai --}}
                     <div class="why_dubai">
-                        <div class="main_title">Why Dubai</div>
+                        <div class="main_title" data-aos="fade-left">Why Dubai</div>
                         <div class="black_bg grid">
                             <div class="col flex_col"> 
                                 <img src="/images/tax.png"/>
@@ -87,7 +87,7 @@
                     {{-- Why Dubai --}}
                     {{-- start Services --}}
                     <div class="services_col">
-                        <div class="main_title">Our Services</div>
+                        <div class="main_title" data-aos="fade-left">Our Services</div>
                         <div class="grid">
                             <div class="order_ser col">
                                 <div class="service">
@@ -125,7 +125,7 @@
                                 <div class="btn_link">
                                     <div>Our Services</div> 
                                 </div>
-                                <div class="title">
+                                <div class="title" data-aos="fade-left">
                                     EFFECTIVE SERVICES
                                 </div>
                                 <div class="desc">
@@ -161,7 +161,7 @@
                             <div class="flex_row">
                                 <div class="text_container">
                                     <div class="btn_link">About US </div>
-                                    <div class="title">Businesses Through <span>Management</span></div>
+                                    <div class="title" data-aos="fade-left">Businesses Through <span>Management</span></div>
                                     <div class="desc">
                                         we specialize in providing comprehensive business management solutions
                                         tailored to meet the unique needs of our clients. With years of 
@@ -199,7 +199,7 @@
                             <div class="btn">
                                 Testimonials
                             </div>
-                            <div class="main_title">
+                            <div class="main_title" data-aos="fade-left">
                              What They Say About<br>
                              <span>Our Company</span>
                             </div>
@@ -298,7 +298,7 @@
                             <div class="btn">
                                 Blog & News
                             </div>
-                            <div class="main_title">
+                            <div class="main_title" data-aos="fade-left">
                                 Recent blog post
     
                             </div>
@@ -366,11 +366,14 @@
                     <div class="newsletter">
                         <div class="flex_col">
                             <div class="btn_link">Subscribe Newsletter</div>
-                            <div class="title">Your Connection to All Things New Subscribe Now</div>
+                            <div class="title" data-aos="fade-left">Your Connection to All Things New Subscribe Now</div>
                             <div class="form_container">
                                 <form class="form_newsletter">
                                     <div class="input_container">
                                         <input type="text" placeholder="Enter Email Address"/>
+                                        <div class="error-message">
+                                            Must be a valid email and contain @
+                                          </div>
                                     </div>
                                     <div class="submit btn_link">
                                         <button type="submit">Subscribe Now</button>

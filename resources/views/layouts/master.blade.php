@@ -32,7 +32,11 @@
         <script src="{{asset('js/app.js?v=0.8')}}"></script>
         <script src="{{asset('js/aos.js')}}"></script>
         <script>
-            AOS.init();
+            AOS.init({
+                duration: 900,
+                once: true, 
+               
+            });
         </script>
     </body>
 
