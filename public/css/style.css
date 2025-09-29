@@ -800,6 +800,9 @@ cursor: pointer;
 .about_section .flex_row .text_container .btn_link{
   background-color: #b3b3b3;
 }
+.about_section .flex_row .text_container .btn_link:hover{
+ background-color:rgba(0, 0, 0, 0.8)
+}
 .about_section .flex_row .text_container .desc{
   color: #b3b3b3;
 }
@@ -904,11 +907,14 @@ cursor: pointer;
   color: #000;
   background-color: #c9c9c9;
 }
-.newsletter .flex_col .form_container form.form_newsletter .submit.btn_link:hover{
-    color: #c9c9c9;
+.newsletter .flex_col .form_container form.form_newsletter .submit.btn_link:hover {
+   
     background-color: #000;
 
 
+}
+.newsletter .flex_col .form_container form.form_newsletter .submit.btn_link:hover button{
+  color:#c9c9c9
 }
 .newsletter .flex_col .form_container form.form_newsletter .submit button{
   background-color: transparent;
@@ -926,4 +932,10 @@ cursor: pointer;
 .newsletter .flex_col .form_container form.form_newsletter .input_container input::placeholder{
   color: #fff;
   
+}
+.error-message{
+  color: red;
+    font-size: 13px;
+    position: absolute;
+    
 }

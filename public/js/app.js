@@ -131,33 +131,47 @@ $(document).ready(function() {
   });
 });
 
+$('img.icon').on('click', function (event) {
+  event.stopPropagation();
+  const $sidebar = $('.right-list');
 
+  if ($sidebar.css('right') === '0px') {
+      $sidebar.css('right', '-30rem');
+  } else {
+      $sidebar.css('right', '0');
+  }
+});
+$('.newsletter form').on('submit', function (e) {
+  e.preventDefault(); 
+  let isValid = true;
 
+  $(this).find('input[type="text"]').each(function () {
+      var value = $.trim($(this).val());
+      var placeholder = ($(this).attr('placeholder') || '').toLowerCase();
+      var errorField = $(this).siblings('.error-message');
 
-// let lastScrollY = window.scrollY;
-// const header = document.querySelector('.header');
-// const topSection = document.querySelector('.top_section');
-// const mainSection = document.querySelector('.main_setion');
+      if (value === '') {
+          errorField.text('This field is required').show();
+          isValid = false;
+      } else if (placeholder.includes('email')) {
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(value)) {
+              errorField.text('Must be a valid email and contain @').show();
+              isValid = false;
+          } else {
+              errorField.hide();
+          }
+      } else {
+          errorField.hide();
+      }
+  });
 
-// window.addEventListener('scroll', () => {
-//   const currentY = window.scrollY;
+  if (isValid) {
+      this.submit(); // ✅ only submit if valid
+  }
+});
 
-//   if (currentY === 0) {
-//     // At top → show everything
-//     header.classList.remove('hide');
-//     topSection.classList.remove('hide');
-//     mainSection.classList.remove('fix', 'show');
-//   } else if (currentY > lastScrollY) {
-//     header.classList.add('hide');
-//     topSection.classList.remove('hide'); // reset topSection in case
-//     mainSection.classList.add('fix');
-//     mainSection.classList.remove('show');
-//   } else {
-//     // Scrolling up but not at top → show only main_section with slide down
-//     header.classList.remove('hide');
-//     topSection.classList.add('hide');
-//     mainSection.classList.add('fix', 'show');
-//   }
-
-//   lastScrollY = currentY;
-// });
+// 👇 Silent removal when user types
+$('.newsletter form input[type="text"]').on('input', function () {
+  $(this).siblings('.error-message').hide();
+});
