@@ -42,3 +42,7 @@ Route::get('/blog', function () {
 Route::get('/blog_details', function () {
     return view('blog_details'); 
 });
+
+Route::get('/about', function () {
+    return view('about'); 
+})->name('about');
