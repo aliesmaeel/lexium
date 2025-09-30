@@ -76,6 +76,9 @@
         flex-direction: column;
         gap:2rem
     }
+    .about_page .text_desc .title {
+        font-size: 33px;
+    }
     .about_section .flex_row .text_container,.about_section .flex_row .img_container,
     .about_section .flex_row .grid{
         width:100%
