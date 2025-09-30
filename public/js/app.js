@@ -103,7 +103,7 @@ function animateNumbers() {
 }
 
 function onScroll() {
-  if (isInViewport(aboutSection)) {
+  if (aboutSection && isInViewport(aboutSection)) {
     animateNumbers();
     window.removeEventListener('scroll', onScroll);
   }

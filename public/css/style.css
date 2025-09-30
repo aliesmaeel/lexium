@@ -737,7 +737,7 @@ cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
-  font-size: 25px;
+  font-size: 18px;
   color: #111827;
   font-weight: bold;
 }
@@ -1026,4 +1026,49 @@ ul{
 .Get_in_touch .text{
   font-size: 20px;
   font-weight: 600;
+}
+.banner_about{
+  width: 100%;
+  height: calc(100vh - 160px);
+  position: relative;
+  top:-15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_about .main_title{
+  color: #fff;
+  z-index: 11;
+}
+.about_page .text_desc{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0 5rem ;
+  gap:2rem
+}
+.about_page .text_desc .title{
+  font-size: 45px;
+  color:rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+.about_page .text_desc  .desc{
+  font-size: 19px;
+    color: rgba(0, 0, 0, 0.55);
+}
+.banner_about::after{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.25);
+  content: '';
+  top:0;
+  left: 0;
+}
+.banner_about img{
+  position: absolute;
+  object-fit: cover;
+  height:100%;
+  width: 100%;
+  
 }

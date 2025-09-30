@@ -36,7 +36,7 @@
                 <a href="#services">Corporate Services</a>
                 <a href="#industriese">Industries</a>
                 <a href="#resources">Resources</a>
-                <a href="#about">About</a>
+                <a href="/about">About</a>
                 <a href="#contact-us">Contact</a>
             </div>
         </div>
