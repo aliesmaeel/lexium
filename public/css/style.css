@@ -1027,7 +1027,8 @@ ul{
   font-size: 20px;
   font-weight: 600;
 }
-.banner_about{
+.banner_about,
+.banner_contact{
   width: 100%;
   height: calc(100vh - 160px);
   position: relative;
@@ -1036,17 +1037,20 @@ ul{
   justify-content: center;
   align-items: center;
 }
-.banner_about .main_title{
+.banner_about .main_title,
+.contact_page .banner_contact .main_title{
   color: #fff;
   z-index: 11;
 }
-.about_page .text_desc{
+.about_page .text_desc,
+.contact_page .text_desc{
   display: flex;
   flex-direction: column;
   padding: 3rem 0 5rem ;
   gap:2rem
 }
-.about_page .text_desc .title{
+.about_page .text_desc .title,
+.contact_page .text_desc .title{
   font-size: 45px;
   color:rgba(0, 0, 0, 0.8);
   font-weight: 600;
@@ -1055,7 +1059,8 @@ ul{
   font-size: 19px;
     color: rgba(0, 0, 0, 0.55);
 }
-.banner_about::after{
+.banner_about::after,
+.contact_page .banner_contact::after{
   width: 100%;
   height:100%;
   position: absolute;
@@ -1065,10 +1070,97 @@ ul{
   top:0;
   left: 0;
 }
-.banner_about img{
+.banner_about img,
+.contact_page .banner_contact img{
   position: absolute;
   object-fit: cover;
   height:100%;
   width: 100%;
   
+}
+.contact_page .form_contact_us .form_contact{
+  width: 100%;
+  margin-top: 3rem;
+}
+.contact_page .form_contact_us .form_contact .grid_container{
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+  align-items: center;
+  gap:2rem
+}
+.contact_page .form_contact_us .form_contact .grid_container .col{
+  display: flex;
+  flex-direction: column;
+  gap:2rem
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .title_form{
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 600;
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container{
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  padding: 0;
+  border-radius: 0;
+  position: relative;
+  
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container.btn_link{
+  cursor: pointer;
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container.btn_link:hover input{
+  color:#fff
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container.btn_link input{
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container.span_2{
+  grid-column: span 2;
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container input{
+  width: 90%;
+  margin: 0 5%;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.55);
+  background-color: transparent;
+  padding: 0.8rem 0;
+  font-size: 18px;
+}
+.contact_page .form_contact_us .form_contact .flex_row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:2rem
+
+
+}
+.contact_page .form_contact_us .form_contact .flex_row .call{
+  display: flex
+;
+    gap: 1rem;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0.7rem;
+    justify-content: center;
+    width: calc(100% - 1.4rem);
+
+}
+.contact_page .form_contact_us .form_contact .flex_row .call div{
+  font-size: 20px;
+  font-weight: 600;
+} 
+.contact_page .form_contact_us .form_contact .flex_row .call img{
+  width: 33px;
+  
+} 
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container .error-message{
+  bottom: -22px;
+}
+.contact_page .form_contact_us .form_contact .grid_container .col .input_container.span_2 input{
+  width: 95%;
+  margin: 0 2.5%;
 }
