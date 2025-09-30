@@ -180,7 +180,61 @@ $('.newsletter form').on('submit', function (e) {
   }
 });
 
-// 👇 Silent removal when user types
 $('.newsletter form input[type="text"]').on('input', function () {
   $(this).siblings('.error-message').hide();
+});
+
+ // Form submit validation
+ $('.contact_page .form_contact_us .form_contact').on('submit', function (e) {
+  e.preventDefault();
+  let isValid = true;
+  $('.error-message').hide();
+
+  $('.contact_page .form_contact_us .form_contact input[type="text"]').each(function () {
+      var value = $.trim($(this).val());
+      var placeholder = ($(this).attr('placeholder') || '').toLowerCase();
+      var errorField = $(this).closest('.input_container').find('.error-message');
+
+      if (value === '') {
+          errorField.text('This field is required').show();
+          isValid = false;
+      } else if (placeholder.includes('email')) {
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(value)) {
+              errorField.text('Please enter a valid email address').show();
+              isValid = false;
+          }
+      }
+  });
+  if (isValid) {
+      this.submit();
+  }
+});
+ // only numbers + live error
+ $('#phoneInput').on('input', function () {
+  this.value = this.value.replace(/\D/g, '');
+  var errorField = $(this).closest('.input_container').find('.error-message');
+  if (this.value === '') {
+      errorField.text('This field is required').show();
+  } else {
+      errorField.hide();
+  }
+});
+// validation 
+$('.contact_page .form_contact_us .form_contact input[type="text"]').on('input', function () {
+  var value = $.trim($(this).val());
+  var placeholder = ($(this).attr('placeholder') || '').toLowerCase();
+  var errorField = $(this).closest('.input_container').find('.error-message');
+
+  if (value === '') {
+      errorField.text('This field is required').show();
+  } else if (placeholder.includes('email')) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          errorField.text('Please enter a valid email address').show();
+      } else {
+          errorField.hide();
+      }
+  } else {
+      errorField.hide();
+  }
 });

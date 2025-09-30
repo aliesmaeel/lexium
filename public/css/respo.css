@@ -10,6 +10,9 @@
     }
 }
 @media (max-width:599px){
+    .contact_page .form_contact_us .form_contact .flex_row{
+        flex-direction: column;
+    }
     .blogs_section .container .blogs_swiper .single_blog,
     .blogs_section .container .blogs_swiper .single_blog .img_Container{
         width:320px
@@ -21,6 +24,12 @@
     }
 }
 @media (min-width:768px) and (max-width:990px){
+    .contact_page .form_contact_us .form_contact .flex_row{
+        flex-direction: column;
+    }
+    .contact_page .form_contact_us .form_contact .grid_container .col .input_container{
+        grid-column: span 2;
+    }
     .newsletter .flex_col .form_container{
         width:90%
     }
@@ -47,6 +56,18 @@
     }
 }
 @media (max-width:767px){
+    .contact_page .form_contact_us .form_contact .grid_container .col .input_container input{
+        width: 95%;
+        margin: 0 2.5%;
+      }
+    .contact_page .form_contact_us .form_contact .grid_container .col ,
+    .contact_page .form_contact_us .form_contact .grid_container .col .input_container{
+    
+        grid-column: span 2;
+    }
+    /* .contact_page .form_contact_us .form_contact .flex_row{
+        flex-wrap: wrap;
+    } */
     .newsletter .flex_col .form_container{
         width:90%
     }
@@ -76,7 +97,8 @@
         flex-direction: column;
         gap:2rem
     }
-    .about_page .text_desc .title {
+    .about_page .text_desc .title,
+    .contact_page .text_desc .title {
         font-size: 33px;
     }
     .about_section .flex_row .text_container,.about_section .flex_row .img_container,
