@@ -24,7 +24,7 @@
 }
 @media (max-width:599px){
     .testimonials_section .container .dark_bg .flex .img_container {
-        width: 50%;
+        width: 60%;
     }
     .newsletter .flex_col{
         width:100% !important
