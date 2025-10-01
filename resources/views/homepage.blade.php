@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'HomePage')
+@section('title', 'Dubai business setup, company formation Dubai, start a business in UAE, UAE corporate services, Golden Visa Dubai.')
 {{-- header --}}
 @section('header')
     @include('layouts.header')
