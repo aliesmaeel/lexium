@@ -2,6 +2,10 @@
     .about_section .flex_row .img_container .pos{
         font-size: 100px;
     }
+    .about_section .flex_row .img_container img {
+        width: 360px;
+        top: 7rem;
+    }
     .home .content .why_dubai .black_bg{
  
        
@@ -111,7 +115,7 @@
         width:100%
     }
     .about_section .flex_row .img_container img{
-        width:300px
+        width:282px
     }
     .home .content .why_dubai .black_bg{
         grid-template-columns: repeat(1, 1fr);
@@ -240,6 +244,9 @@
    
 }
 @media(max-width:990px){
+    .services_col .grid .col .arrow{
+        width: 60%;
+    }
     .newsletter .flex_col{
         width:80%
     }

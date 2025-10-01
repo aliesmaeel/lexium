@@ -487,7 +487,8 @@ cursor: pointer;
   font-weight: 600;
 }
 .services_col .grid .col .arrow{
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 .services_col .grid .col.order_ser .service{
   display: flex;
@@ -834,15 +835,16 @@ cursor: pointer;
     
     display: flex
 ;
-   padding: 2rem;
+   padding: 2rem 2rem 0;
     align-items: center;
     justify-content: space-around;
     
-    margin: 3rem 0 1rem;
+    margin: 3rem 0 0rem;
 
 }
 .about_section .container{
   width:90%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -859,17 +861,20 @@ cursor: pointer;
 }
 .about_section .flex_row .img_container img{
   position: relative;
+  top: 1.3rem;
+  height: 100%;
+  width: 450px;
 }
 .about_section .flex_row .img_container .pos{
   position: absolute;
     top: 0;
     left: 0;
-    font-size: 150px;
+    font-size: 140px;
     text-align: center;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: rgba(158, 158, 158, 0.5);
-    max-width: 100%;
+    width: 100%;
     word-break: break-word;
 }
 .about_section .flex_row .text_container{
@@ -947,7 +952,7 @@ cursor: pointer;
   font-weight: 600;
 }
 .about_section .flex_row .img_container img{
-  width: 100%;
+  height: 100%;
   
 }
 
