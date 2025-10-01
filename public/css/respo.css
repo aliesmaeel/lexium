@@ -23,6 +23,9 @@
     }
 }
 @media (max-width:599px){
+    .testimonials_section .container .dark_bg .flex .img_container {
+        width: 50%;
+    }
     .newsletter .flex_col{
         width:100% !important
     }
@@ -171,9 +174,7 @@
     .about_section .flex_row .grid{
         width:100%
     }
-    .testimonials_section .container .dark_bg .flex .img_container{
-        display: none;
-    }
+    
     .testimonials_section .container .swiper_testi{
         width: calc(100% - 1rem);
     }

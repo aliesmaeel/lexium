@@ -257,7 +257,7 @@
                             <div class="dark_bg">
                                 <div class="flex">
                                     <div class="img_container">
-                                        <img src="/images/testi.webp"/>
+                                        <img src="/images/testi.png"/>
                                     </div>
                                     
                                     <div class="swiper swiper_testi">
