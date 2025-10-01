@@ -1,6 +1,4 @@
-{{-- <div class="shadow">
 
-</div> --}}
 <div class="footer">
     <div class="content">
         <div class="grid">
