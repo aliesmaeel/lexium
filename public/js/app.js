@@ -6,11 +6,7 @@ var swiper_banner = new Swiper(".banner_swiper", {
     delay: 5000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  
+ 
 });
 var swiper_testimonial = new Swiper(".swiper_testi", {
   loop: true,
@@ -111,7 +107,7 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll);
 $(document).ready(function() {
-  $('.newsletter .flex_col .form_container form.form_newsletter .input_container input').focus();
+  // $('.newsletter .flex_col .form_container form.form_newsletter .input_container input').focus();
   var lastScrollY = $(window).scrollTop();
   $(window).on('scroll', function() {
     var currentY = $(this).scrollTop();
@@ -236,5 +232,39 @@ $('.contact_page .form_contact_us .form_contact input[type="text"]').on('input',
       }
   } else {
       errorField.hide();
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  function animateCircle(circle, duration = 1200) {
+    const pct = Math.max(0, Math.min(100, parseFloat(circle.getAttribute('data-percent') || 0)));
+    const targetDeg = (pct / 100) * 360;
+    const startTime = performance.now();
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const t = Math.min(1, elapsed / duration);
+      const ease = 1 - Math.pow(1 - t, 3); // ease-out cubic
+      const currentDeg = ease * targetDeg;
+      circle.style.setProperty('--deg', currentDeg + 'deg');
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+ 
+  const section = document.querySelector('.why_dubai');
+  if (section && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const circles = entry.target.querySelectorAll('.circle');
+          circles.forEach(c => {
+            c.style.setProperty('--deg', '0deg'); 
+            animateCircle(c, 1200);
+          });
+        }
+      });
+    }, { threshold: 0.4 }); 
+    observer.observe(section);
   }
 });
