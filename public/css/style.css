@@ -1413,7 +1413,8 @@ linear infinite;
 }
 
 
-.business_page .content_business .grid_container{
+.business_page .content_business .grid_container,
+.visas_page .grid_container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap:2rem;
@@ -1421,7 +1422,8 @@ linear infinite;
   padding: 1rem 0rem 1rem 1rem;
   margin-bottom: 3rem;
 }
-.business_page .content_business .button{
+.business_page .content_business .button,
+.visas_page .button{
   margin: 3rem 0;
 }
 .business_page .content_business .grid_container .col{
@@ -1453,4 +1455,50 @@ linear infinite;
   flex-direction: column;
   width: 90%;
   gap:1rem
+}
+
+.visas_page .banner_contact .main_title::after{
+  content:"Visas"
+}
+.visas_page .grid_container .col{
+  display: flex;
+  flex-direction: column;
+  gap:3rem
+}
+.visas_page .grid_container .col li{
+  font-size: 20px;
+}
+.visas_page .grid_container .col .text_desc{
+  padding: 2rem 0;
+}
+.visas_page .grid_container .col.img_container{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.visas_page .grid_container .col.img_container img{
+  width:80%;
+  height:550px;
+  object-fit: cover;
+}
+.visas_page .grid_container .col li span{
+  font-weight: 600;
+  display: block;
+  padding-bottom: 1rem;
+  font-size: 30px;
+  color:#000
+  
+}
+.visas_page .grid_container .col li{
+  padding-bottom:3rem ;
+  color:rgba(0, 0, 0, 0.6)
+}
+.visas_page .grid_container .col ul{
+  padding: 0;
+  margin: 0;
+}
+.visas_page .grid_container{
+  border: none;
+  padding: 0;
 }

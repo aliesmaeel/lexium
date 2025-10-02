@@ -17,3 +17,7 @@ Route::get('/contact', function () {
 Route::get('/business', function () {
     return view('business'); 
 })->name('business');
+
+Route::get('/visas', function () {
+    return view('visas'); 
+})->name('visas');
