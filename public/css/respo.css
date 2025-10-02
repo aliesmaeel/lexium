@@ -1,4 +1,9 @@
 @media(max-width:1199px) and (min-width:991px){
+    .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
+        font-size: 100px;
+        top: -4rem;
+    }
+    
     .about_section .flex_row .img_container .pos{
         font-size: 100px;
     }
@@ -23,6 +28,23 @@
     }
 }
 @media (max-width:599px){
+    .business_page .content_business .grid_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .business_page .content_business .grid_container .col{
+        grid-template-columns: repeat(1, 1fr);
+        gap:2rem;
+        padding: 1rem;
+
+      }
+    .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
+        font-size: 50px;
+        top: -2rem;
+    }
     .testimonials_section .container .dark_bg .flex .img_container {
         width: 60%;
     }
@@ -56,6 +78,16 @@
    
 }
 @media (min-width:768px) and (max-width:990px){
+    .business_page .content_business .grid_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: 0 auto;
+      }
+    .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
+        font-size: 100px;
+        top: -4rem;
+    }
     .about_section .flex_row{
         flex-direction: column;
     }
@@ -110,6 +142,19 @@
     }
 }
 @media (max-width:767px){
+   
+    .contact_page .banner_contact .two, .banner_about .two {
+        width: 80px;
+        left: 45%;
+    }
+    .contact_page .banner_contact .one, .banner_about .one{
+        width: 100px;
+        left: 10%;
+
+    }
+    .contact_page .banner_contact .three, .banner_about .three{
+       display: none;
+    }
     .contact_whatsapp {
         border-radius: 24px;
     }
@@ -242,9 +287,20 @@
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .business_page .content_business .grid_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0 auto;
+      }
+    .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
+        font-size: 80px;
+        top: -3rem;
+    }
    
 }
 @media(max-width:990px){
+    
     .services_col .grid .col .arrow{
         width: 60%;
     }

@@ -10,7 +10,10 @@
 @section('content')
     <div class="about_page">
         <div class="banner_about">
-            <img src="/images/banner_about.jpg">
+            {{-- <img src="/images/banner_about.jpg"> --}}
+            <img src="/images/bg1.png" class="one"/>
+            <img src="/images/bg2.png" class="two"/>
+            <img src="/images/bg3.png" class="three"/>
             <div class="main_title">About US</div>
             
         </div>
