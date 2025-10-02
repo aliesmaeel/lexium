@@ -28,6 +28,16 @@
     }
 }
 @media (max-width:599px){
+     .visas_page .grid_container{
+         grid-template-columns: repeat(1, 1fr);
+     }
+     .visas_page .grid_container .col{
+        width:100%
+     }
+     .visas_page .grid_container .col.img_container img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;}
     .business_page .content_business .grid_container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -300,7 +310,12 @@
    
 }
 @media(max-width:990px){
-    
+    .visas_page .grid_container .col li span {
+        font-size: 24px;
+    }
+    .visas_page .grid_container .col li{
+        font-size: 18px;
+    }
     .services_col .grid .col .arrow{
         width: 60%;
     }
