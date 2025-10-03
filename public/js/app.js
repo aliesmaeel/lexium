@@ -186,7 +186,7 @@ $('.newsletter form input[type="text"]').on('input', function () {
   let isValid = true;
   $('.error-message').hide();
 
-  $('.contact_page .form_contact_us .form_contact input[type="text"]').each(function () {
+  $('.contact_page .form_contact_us .form_contact input[type="text"], .contact_page textarea').each(function () {
       var value = $.trim($(this).val());
       var placeholder = ($(this).attr('placeholder') || '').toLowerCase();
       var errorField = $(this).closest('.input_container').find('.error-message');
@@ -207,17 +207,17 @@ $('.newsletter form input[type="text"]').on('input', function () {
   }
 });
  // only numbers + live error
- $('#phoneInput').on('input', function () {
-  this.value = this.value.replace(/\D/g, '');
-  var errorField = $(this).closest('.input_container').find('.error-message');
-  if (this.value === '') {
-      errorField.text('This field is required').show();
-  } else {
-      errorField.hide();
-  }
-});
+//  $('#phoneInput').on('input', function () {
+//   this.value = this.value.replace(/\D/g, '');
+//   var errorField = $(this).closest('.input_container').find('.error-message');
+//   if (this.value === '') {
+//       errorField.text('This field is required').show();
+//   } else {
+//       errorField.hide();
+//   }
+// });
 // validation 
-$('.contact_page .form_contact_us .form_contact input[type="text"]').on('input', function () {
+$('.contact_page .form_contact_us .form_contact input[type="text"], .contact_page textarea').on('input', function () {
   var value = $.trim($(this).val());
   var placeholder = ($(this).attr('placeholder') || '').toLowerCase();
   var errorField = $(this).closest('.input_container').find('.error-message');
