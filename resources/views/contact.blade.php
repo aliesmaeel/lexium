@@ -27,35 +27,49 @@
                         <div class="grid_container">
                             <div class="col">
                                 <div class="title_form">
-                                   Consultation form.
+                                    Get In Touch
                                 </div>
-                                <div class="grid_container">
-                                    <div class="input_container">
-                                        <input type="text" placeholder="FullName" />
-                                        <div class="error-message"></div>
+                                <div class="grid_form">
+                                    <div class="flex_img">
+                                        <div class="flex_row">
+                                            <a class="call" href="#">
+                                                <img src="/images/black_call.png"/>
+                                                <div>
+                                                    <div class="gray">Call Us 24/7</div>
+                                                    <div>(+256) 2145.2156</div>
+                                                </div>
+                                            </a>
+                                            <a class="call" href="#">
+                                                <img src="/images/whatsapp.png"/>
+                                                <div>
+                                                    <div class="gray">WhatsApp</div>
+                                                    <div>(+256) 2145.2156</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <img src="/images/family.webp" class="img"/>
                                     </div>
-                                    <div class="input_container">
-                                        <input type="text" placeholder="Phone" id="phoneInput" />
-                                        <div class="error-message"></div>
+                                    <div class="flex_col">
+                                        <div class="input_container">
+                                            <input type="text" placeholder="Phone" id="phoneInput" />
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="input_container span_2">
+                                            <input type="text" placeholder="Email" />
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="input_container">
+                                            <textarea placeholder="Enter tour message"></textarea>
+                                            <div class="error-message"></div>
+                                        </div>
+                                        <div class="input_container span_2 btn_link">
+                                            <input type="submit" placeholder="Get in Touch" />
+                                        </div>
                                     </div>
-                                    <div class="input_container span_2">
-                                        <input type="text" placeholder="Email" />
-                                        <div class="error-message"></div>
-                                    </div>
-                                    <div class="input_container span_2 btn_link">
-                                        <input type="submit" placeholder="Get in Touch" />
-                                    </div>
+                                  
+                                    
                                 </div>
-                                <div class="flex_row">
-                                    <a class="call" href="#">
-                                        <img src="/images/black_call.png"/>
-                                        <div>Direct Call </div>
-                                    </a>
-                                    <a class="call" href="#">
-                                        <img src="/images/whatsapp.png"/>
-                                        <div>WhatsApp </div>
-                                    </a>
-                                </div>
+                                
                             </div>
                             <div class="col">
                                 <iframe

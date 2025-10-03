@@ -28,6 +28,21 @@
     }
 }
 @media (max-width:599px){
+    .flex_img{
+        grid-column: span 1;
+        flex-direction: column;
+        gap:2rem
+    }
+    .contact_page .form_contact_us .form_contact .img{
+        width:100%
+    }
+    .contact_page .form_contact_us .form_contact .grid_container .grid_form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact_page .form_contact_us .form_contact .flex_row .call {
+        display: flex
+    ;
+        gap: 1rem;}
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(1, 1fr);
        
@@ -92,6 +107,12 @@
    
 }
 @media (min-width:768px) and (max-width:990px){
+    .flex_img{
+        grid-column: span 1;
+    }
+    .contact_page .form_contact_us .form_contact .grid_container .grid_form{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(2, 1fr);
        
@@ -305,6 +326,16 @@
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .flex_img{
+        grid-column: span 1;
+    }
+    .contact_page .form_contact_us .form_contact .grid_container .grid_form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact_page .form_contact_us .form_contact .flex_row .call {
+        display: flex
+    ;
+        gap: 1rem;}
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(2, 1fr);
        
