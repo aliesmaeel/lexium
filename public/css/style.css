@@ -1423,7 +1423,8 @@ linear infinite;
   margin-bottom: 3rem;
 }
 .business_page .content_business .button,
-.visas_page .button{
+.visas_page .button,
+.banking_page .button{
   margin: 3rem 0;
 }
 .business_page .content_business .grid_container .col{
@@ -1459,6 +1460,9 @@ linear infinite;
 
 .visas_page .banner_contact .main_title::after{
   content:"Visas"
+}
+.banking_page .banner_contact .main_title::after{
+  content:"Banking"
 }
 .visas_page .grid_container .col{
   display: flex;
@@ -1501,4 +1505,46 @@ linear infinite;
 .visas_page .grid_container{
   border: none;
   padding: 0;
+}
+.banking_page .banking_container .grid_container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:3rem
+}
+.banking_page .banking_container .grid_container .col .text{
+  font-size: 20px;
+  text-align: center;
+}
+.banking_page .banking_container .grid_container .col .text{
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+.banking_page .banking_container .grid_container .col{
+  padding: 4rem 1.4rem;
+  background-color: #f2f2f2;
+  color: #000;
+  font-weight: 600;
+  display: flex
+;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.banking_page .banking_container .grid_container .col:hover{
+  transform: scale(1.02);
+}
+.banking_page .banking_container .grid_container .col img{
+  height: 94px;
+    object-fit: cover;
+}
+.banking_page .banking_container .grid_container .col .flex_col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  flex-direction: column;
+
 }

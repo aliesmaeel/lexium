@@ -28,6 +28,10 @@
     }
 }
 @media (max-width:599px){
+    .banking_page .banking_container .grid_container{
+        grid-template-columns: repeat(1, 1fr);
+       
+      }
      .visas_page .grid_container{
          grid-template-columns: repeat(1, 1fr);
      }
@@ -88,6 +92,10 @@
    
 }
 @media (min-width:768px) and (max-width:990px){
+    .banking_page .banking_container .grid_container{
+        grid-template-columns: repeat(2, 1fr);
+       
+      }
     .business_page .content_business .grid_container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -297,6 +305,10 @@
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .banking_page .banking_container .grid_container{
+        grid-template-columns: repeat(2, 1fr);
+       
+      }
     .business_page .content_business .grid_container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);

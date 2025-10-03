@@ -68,15 +68,15 @@
                 
                 </li>
                 <li class="main_list_mobile">
-                    <a href="#home">Home</a>
-                    <a href="#business">Business</a>
-                    <a href="#visas-residency">Visas & Residency</a>
+                    <a href="/home">Home</a>
+                    <a href="/business">Business</a>
+                    <a href="/visas">Visas & Residency</a>
                     <a href="#banking-finance">Banking & Finance</a>
                     <a href="#services">Corporate Services</a>
                     <a href="#industriese">Industries</a>
                     <a href="#resources">Resources</a>
-                    <a href="#about">About</a>
-                    <a href="#contact-us">Contact</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
                 </li>
                 <li class="Get_in_touch">
                     <div class="text">Get In Touch</div>

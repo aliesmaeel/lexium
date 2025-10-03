@@ -21,3 +21,7 @@ Route::get('/business', function () {
 Route::get('/visas', function () {
     return view('visas'); 
 })->name('visas');
+
+Route::get('/banking', function () {
+    return view('banking'); 
+})->name('banking');
