@@ -1501,6 +1501,9 @@ border-radius: 20px;
 .visas_page .banner_contact .main_title::after{
   content:"Visas"
 }
+.services_page .banner_contact .main_title::after{
+  content:"Services"
+}
 .banking_page .banner_contact .main_title::after{
   content:"Banking"
 }
@@ -1587,4 +1590,64 @@ border-radius: 20px;
   gap:1rem;
   flex-direction: column;
 
+}
+.services_page .grid_container {
+  grid-template-columns: repeat(3, 1fr) !important;
+  border: none!important;
+  padding: 0 !important;
+  gap:2rem 
+}
+.services_page .grid_container .main_col{
+  grid-column: span 2;
+  grid-template-columns: repeat(2, 1fr) ;
+  display: grid;
+  gap:2rem
+ 
+}
+.services_page .grid_container .col .icon {
+  width: fit-content !important;
+}
+.services_page .grid_container .main_col .col .icon img{
+  width: 65px;
+}
+.services_page .grid_container .main_col .col:hover{
+  transform: scale(1.02);
+}
+.services_page .grid_container .main_col .col{
+  background-color: #f2f2f2;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+ 
+ border-radius: 12px; 
+  display: flex;
+  gap:1rem;
+  justify-content: flex-start;
+ 
+}
+.services_page .grid_container .second_col{
+  width: 100%;
+}
+.services_page .grid_container .second_col img{
+  width: 100%;
+}
+.services_page .grid_container .main_col .flex_col{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap:1rem;
+  padding: 1rem;
+ 
+}
+.services_page .grid_container .main_col .flex_col .text .title{
+  font-size: 21px;
+  
+}
+.services_page .grid_container .main_col .flex_col .text .desc{
+  font-size: 18px;
+  
+}
+.services_page .grid_container .main_col .flex_col .text{
+  display: flex;
+  gap:1rem;
+  flex-direction: column;
 }

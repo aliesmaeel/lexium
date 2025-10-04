@@ -181,7 +181,13 @@
     }
 }
 @media (max-width:767px){
-   
+    .services_page .grid_container .main_col{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+   .services_page .grid_container .main_col .col{
+        padding: 2rem;
+    }
     .contact_page .banner_contact .two, .banner_about .two {
         width: 80px;
         left: 45%;
@@ -353,6 +359,16 @@
    
 }
 @media(max-width:990px){
+    .services_page .grid_container {
+        grid-template-columns: repeat(1, 1fr) !important;
+        width: 100%!important;
+        
+      }
+      .services_page .grid_container .second_col img{
+        width: 100%;
+        height: 506px;
+        object-fit: cover;
+      }
     .visas_page .grid_container .col li span {
         font-size: 24px;
     }
