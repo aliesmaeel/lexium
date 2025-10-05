@@ -25,6 +25,15 @@ Route::get('/visas', function () {
 Route::get('/banking', function () {
     return view('banking'); 
 })->name('banking');
+
 Route::get('/services', function () {
     return view('services'); 
 })->name('services');
+
+Route::get('/industries', function () {
+    return view('industries'); 
+})->name('industries');
+
+Route::get('/blog', function () {
+    return view('blog'); 
+})->name('blog');

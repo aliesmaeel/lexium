@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'business setup in Dubai, company formation UAE, free zone company Dubai, Dubai mainland license, offshore company UAE.')
+@section('meta_title', 'Business Setup in Dubai | Free Zone, Mainland & Offshore')
+@section('meta_description', 'Set up your company in Dubai with Lexium Business Hub. Mainland, free zone, and offshore company formation with expert guidance and fast licensing.')
+@section('meta_keywords', 'business setup in Dubai, company formation UAE, free zone company Dubai, Dubai mainland license, offshore company UAE')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
@@ -19,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title" data-aos="fade-left"> 
                     Business Setup in Dubai Made Simple.
                 </div>
                 <div class="desc">
@@ -32,7 +35,7 @@
             </div>
             <div class="content_business">
                 <div class="grid_container">
-                    <div class="col">
+                    <div class="col" data-aos="fade-up">
                         <div class="flex_col">
                             <div class=" icon">
                                 <img src="/images/company.png">
@@ -49,7 +52,7 @@
                         </div>
                         
                     </div>
-                    <div class="col">
+                    <div class="col" data-aos="fade-up">
                         
                         <div class="flex_col">
                             <div class=" icon">
@@ -67,7 +70,7 @@
                         </div>
                         
                     </div>
-                    <div class="col">
+                    <div class="col" data-aos="fade-up">
                         <div class="flex_col">
                             <div class=" icon">
                                 <img src="/images/offshore.png">
@@ -85,7 +88,7 @@
                         
                     </div>
                 </div>
-                <div class="button">
+                <div class="button" >
                     <a class="btn_link">
                         Compare Free Zones
                     </a>

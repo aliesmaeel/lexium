@@ -1225,12 +1225,20 @@ linear infinite;
   text-align: center;
 
 }
+.header .main_setion .main_list a:hover{
+  opacity: 0.6;
+}
+.header .main_setion .main_list a{
+  transition: all 0.3s ease-in-out;
+}
+.contact_page.business_page.industries_page .main_title::after{
+  content: "Industries" !important;
+}
 .contact_page.business_page .main_title::after{
   content: "Business" !important;
-
- 
-
- 
+}
+.contact_page.blog_page .main_title::after{
+  content: "Blog" !important;
 }
 .banner_about .main_title::after{
   content: 'ABOUT US';
@@ -1650,4 +1658,35 @@ border-radius: 20px;
   display: flex;
   gap:1rem;
   flex-direction: column;
+}
+.business_page.industries_page .content_business .grid_container .col{
+  display: block;
+}
+.business_page.industries_page .content_business .grid_container .col .flex_row{
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+  padding-bottom: 1.4rem;
+}
+.business_page.industries_page .content_business .grid_container{
+  grid-template-columns: repeat(3, 1fr);
+  border:none
+}
+.business_page.industries_page .content_business .grid_container .col:first-of-type{
+  grid-column: span 2;
+}
+.business_page.industries_page .content_business .grid_container .col{
+  width: 100%;
+}
+.business_page.industries_page .content_business .grid_container .col .desc{
+  padding-top: 0.5rem;
+}
+.business_page.industries_page .content_business .grid_container .col .icon{
+  width: fit-content;
+}
+.business_page.industries_page .content_business .grid_container .col .icon img{
+  width: 65px;
+}
+.business_page.industries_page .content_business .grid_container .col.img_container img{
+  width: 100%;
 }

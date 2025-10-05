@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title> @yield('title')</title>
+        <title>@yield('meta_title', 'Lexium Business Hub')</title>
+        <meta name="description" content="@yield('meta_description', 'Lexium Business Hub - Dubai business setup and corporate services.')">
+        <meta name="keywords" content="@yield('meta_keywords', 'Dubai business setup, free zone company, Golden Visa UAE')">
         <link rel="stylesheet" href="/css/style.css?v={{ time() }}">
         <link rel="stylesheet" href="/css/respo.css?v={{ time() }}">
         <link rel="stylesheet" href="/css/swiper-bundle.min.css?v={{ time() }}">
@@ -34,7 +36,7 @@
         <script>
             AOS.init({
                 duration: 900,
-                once: true, 
+                // once: true, 
                
             });
         </script>
