@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'Golden Visa Dubai, UAE residency visa, Dubai investor visa, long-term visa UAE.')
+@section('meta_title', 'Golden Visa & Residency Services in Dubai | Lexium')
+@section('meta_description', 'Apply for a UAE Golden Visa or residency in Dubai with Lexium Business Hub. Investor visas, family sponsorship, and employment visas made easy.')
+@section('meta_keywords', 'Golden Visa Dubai, UAE residency visa, Dubai investor visa, long-term visa UAE')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
@@ -19,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title" data-aos="fade-left"> 
                     Secure Your Future in the UAE with Dubai Visas & Residency Solutions.
                 </div>
                 <div class="desc">
@@ -28,7 +31,7 @@
                 </div>
             </div>
             <div class="grid_container">
-                <div class="col">
+                <div class="col" data-aos="fade-up">
                     <div class="text_desc">
                         <ul>
                             <li>
@@ -43,7 +46,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col img_container">
+                <div class="col img_container" data-aos="fade-up">
                     <img src="/images/imm.jpg"/>
                 </div>
             </div>

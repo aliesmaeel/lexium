@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'contact Lexium Business Hub, Dubai business setup consultation, start company UAE contact.')
+@section('meta_title', 'Contact Lexium Business Hub | Dubai Company Formation')
+@section('meta_description', 'Get in touch with Lexium Business Hub. Book a free consultation for business setup, Golden Visa, and corporate services in Dubai.')
+@section('meta_keywords', 'contact Lexium Business Hub, Dubai business setup consultation, start company UAE contact')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
@@ -19,19 +22,19 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title" data-aos="fade-left"> 
                     Start Your Dubai Business Journey Today.
                 </div>
                 <div class="form_contact_us">
                     <form class="form_contact">
                         <div class="grid_container">
                             <div class="col">
-                                <div class="title_form">
+                                <div class="title_form" data-aos="fade-left">
                                     Get In Touch
                                 </div>
-                                <div class="grid_form">
-                                    <div class="flex_img">
-                                        <div class="flex_row">
+                                <div class="grid_form" >
+                                    <div class="flex_img" data-aos="fade-up" >
+                                        <div class="flex_row" >
                                             <a class="call" href="#">
                                                 <img src="/images/black_call.png"/>
                                                 <div>
@@ -49,7 +52,7 @@
                                         </div>
                                         <img src="/images/family.webp" class="img"/>
                                     </div>
-                                    <div class="flex_col">
+                                    <div class="flex_col" data-aos="fade-up">
                                         <div class="input_container">
                                             <input type="text" placeholder="Phone" id="phoneInput" />
                                             <div class="error-message"></div>
@@ -71,7 +74,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="fade-up">
                                 <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.9961046069464!2d55.27078231501054!3d25.20484998389708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f434f06f6d0f5%3A0x33b7c59f82a0c8c4!2sDubai!5e0!3m2!1sen!2sae!4v1697387581234!5m2!1sen!2sae"
                                 width="100%" height="400" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"

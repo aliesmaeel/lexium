@@ -70,6 +70,9 @@
         padding: 1rem;
 
       }
+      .business_page.industries_page .content_business .grid_container .col{
+        padding: 0;
+      }
     .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
         font-size: 50px;
         top: -2rem;
@@ -359,10 +362,22 @@
    
 }
 @media(max-width:990px){
-    .services_page .grid_container {
+    .business_page.industries_page .content_business .grid_container{
+        padding: 0;
+    }
+    .business_page.industries_page .content_business .grid_container .col:first-of-type{
+            grid-column: span 1;
+    }
+    .services_page .grid_container,
+    .business_page.industries_page .content_business .grid_container {
         grid-template-columns: repeat(1, 1fr) !important;
         width: 100%!important;
         
+      }
+      .business_page.industries_page .content_business .grid_container .col.img_container img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
       }
       .services_page .grid_container .second_col img{
         width: 100%;

@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'PRO services Dubai, corporate services UAE, document clearing Dubai, business support UAE.')
+@section('meta_title', 'Corporate Services in Dubai | PRO, Document Clearing & More')
+@section('meta_description', 'From PRO services to document clearing and license renewals, Lexium Business Hub provides complete corporate support for Dubai businesses.')
+@section('meta_keywords', 'PRO services Dubai, corporate services UAE, document clearing Dubai, business support UAE')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
@@ -19,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title" data-aos="fade-left"> 
                     Comprehensive Corporate Services for Dubai Businesses.
                 </div>
                 <div class="desc">
@@ -30,7 +33,7 @@
             <div class="content_business">
                 <div class="grid_container">
                     <div class="main_col">
-                        <div class="col">
+                        <div class="col" data-aos="fade-up">
                             <div class="flex_col">
                                 <div class=" icon">
                                     <img src="/images/id.png">
@@ -45,7 +48,7 @@
                                 </div>
                             </div>   
                         </div>
-                        <div class="col">
+                        <div class="col" data-aos="fade-up">
                             
                             <div class="flex_col">
                                 <div class=" icon">
@@ -61,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col" data-aos="fade-up">
                             <div class="flex_col">
                                 <div class=" icon">
                                     <img src="/images/support.png">
@@ -77,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="second_col">
+                    <div class="second_col" data-aos="fade-up">
                         <img src="/images/services_col.webp"/>
                     </div>
                 </div>

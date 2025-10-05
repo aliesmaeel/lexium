@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'About Lexium Business Hub | Dubai Company Formation Experts')
+@section('meta_title', 'About Lexium Business Hub | Dubai Business Setup Experts')
+@section('meta_description', 'Learn about Lexium Business Hub — boutique Dubai company formation and corporate services provider trusted by entrepreneurs and investors worldwide.')
+@section('meta_keywords', 'About Lexium Business Hub, Dubai company formation experts, Dubai corporate services, Dubai business setup')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
@@ -19,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title" data-aos="fade-left"> 
                     Your Boutique Partner in Dubai Business Setup.
                 </div>
                 <div class="desc">

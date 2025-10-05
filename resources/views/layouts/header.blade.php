@@ -34,8 +34,8 @@
                 <a href="/visas">Visas & Residency</a>
                 <a href="/banking">Banking & Finance</a>
                 <a href="/services">Corporate Services</a>
-                <a href="#">Industries</a>
-                <a href="#">Resources</a>
+                <a href="/industries">Industries</a>
+                <a href="/blog">Resources</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
@@ -73,8 +73,8 @@
                     <a href="/visas">Visas & Residency</a>
                     <a href="/banking">Banking & Finance</a>
                     <a href="/services">Corporate Services</a>
-                    <a href="#industriese">Industries</a>
-                    <a href="#resources">Resources</a>
+                    <a href="/industries">Industries</a>
+                    <a href="/blog">Resources</a>
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
                 </li>

@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'Dubai business setup, company formation Dubai, start a business in UAE, UAE corporate services, Golden Visa Dubai.')
+@section('meta_title', 'Business Setup in Dubai | Lexium Business Hub LLC')
+@section('meta_description', 'Start your business in Dubai with Lexium Business Hub. Company formation, Golden Visa, corporate services, and banking solutions — simplified and tailored for entrepreneurs and investors.')
+@section('meta_keywords', 'Dubai business setup, company formation Dubai, start a business in UAE, UAE corporate services, Golden Visa Dubai')
+
 {{-- header --}}
 @section('header')
     @include('layouts.header')
