@@ -268,3 +268,10 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(section);
   }
 });
+$('.blog_page .grid_container_blogs .recent_posts.boxes a .desc div').each(function () {
+  var fullText = $(this).text().trim();
+  if (fullText.length > 50) {
+      var truncatedText = fullText.substring(0, 50) + '...';
+      $(this).text(truncatedText);
+  }
+});
