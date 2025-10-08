@@ -194,6 +194,12 @@
     }
 }
 @media (max-width:767px){
+    .blog_details_page .blog_details_cont{
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .blog_details_page .content_details{
+        width: 90%;
+    }
     .blog_page .grid_container_blogs .col.span_2{
         grid-column: span 1;
     }
@@ -385,7 +391,10 @@
     .blog_page .grid_container_blogs .box_content{
         width:90%
     }
-  
+    .blog_details_page .banner_contact{
+        height:calc(100vh - 110px);
+        
+    }
 
     .business_page.industries_page .content_business .grid_container{
         padding: 0;

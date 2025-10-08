@@ -37,3 +37,8 @@ Route::get('/industries', function () {
 Route::get('/blog', function () {
     return view('blog'); 
 })->name('blog');
+
+
+Route::get('/blog_details', function () {
+    return view('blog_details'); 
+});

@@ -31,7 +31,7 @@
             <div class="main_list">
                 <a href="/">Home</a>
                 <a href="/business">Business</a>
-                <a href="/visas">Visas & Residency</a>
+                <a href="/visas">Visas</a>
                 <a href="/banking">Banking & Finance</a>
                 <a href="/services">Corporate Services</a>
                 <a href="/industries">Industries</a>

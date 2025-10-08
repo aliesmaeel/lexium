@@ -275,3 +275,14 @@ $('.blog_page .grid_container_blogs .recent_posts.boxes a .desc div').each(funct
       $(this).text(truncatedText);
   }
 });
+$(".faq-question").click(function () {
+  var $item = $(this).closest(".faq-item");
+  var isActive = $item.hasClass("active");
+  $(".faq-item").removeClass("active");
+  $(".faq-icon").removeClass("rotate");
+
+  if (!isActive) {
+    $item.addClass("active");
+    $(this).find(".faq-icon").addClass("rotate");
+  }
+});
