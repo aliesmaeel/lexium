@@ -28,6 +28,9 @@
     }
 }
 @media (max-width:599px){
+    .calculator_page .content_calculator {
+        width: 100%;
+    }
     .blog_page .grid_container_blogs .col.span_2{
         grid-template-columns: repeat(1,1fr);
     }
@@ -116,6 +119,9 @@
    
 }
 @media (min-width:768px) and (max-width:990px){
+    .calculator_page .content_calculator {
+        width: 85%;
+    }
     .blog_page .grid_container_blogs .col{
         flex-direction: row;
         align-items: flex-start;
@@ -194,6 +200,7 @@
     }
 }
 @media (max-width:767px){
+  
     .blog_details_page .blog_details_cont{
         grid-template-columns: repeat(1,1fr); 
     }
@@ -358,6 +365,9 @@
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .calculator_page .content_calculator {
+        width: 90%;
+    }
     .flex_img{
         grid-column: span 1;
     }
@@ -385,8 +395,24 @@
    
 }
 @media(max-width:990px){
-    .blog_page .grid_container_blogs{
+
+    .header .btn_link {
+        font-size: 14px;
+        padding: 0.7rem 0.7rem !important;
+        transition: all 0.3s 
+    ease-in-out;
+        width: 153px;
+    }
+    .blog_page .grid_container_blogs,
+    .calculator_page .info_form .shadow_border .grid_container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .calculator_page .info_form .shadow_border .grid_container .col.col_span_2{
+        grid-column: span 1;
+    }
+    .calculator_page .buttons{
+        flex-direction: column;
+        gap: 1.5rem;
     }
     .blog_page .grid_container_blogs .box_content{
         width:90%

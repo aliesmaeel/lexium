@@ -18,7 +18,6 @@
                         <img src="/images/phone.png"/> 
                         <span> Hotline: +210-8976569</span>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -32,12 +31,16 @@
                 <a href="/">Home</a>
                 <a href="/business">Business</a>
                 <a href="/visas">Visas</a>
-                <a href="/banking">Banking & Finance</a>
-                <a href="/services">Corporate Services</a>
+                <a href="/banking">Finance</a>
+                <a href="/services">Services</a>
                 <a href="/industries">Industries</a>
                 <a href="/blog">Resources</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
+                <a class="btn_link" href="/cost_calculator">
+                    Cost Calculator
+                </a>
+                
             </div>
         </div>
     </div>
@@ -77,6 +80,9 @@
                     <a href="/blog">Resources</a>
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
+                    <a class="btn_link" href="/cost_calculator">
+                        Cost Calculator
+                    </a>
                 </li>
                 <li class="Get_in_touch">
                     <div class="text">Get In Touch</div>
