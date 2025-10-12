@@ -286,3 +286,191 @@ $(".faq-question").click(function () {
     $(this).find(".faq-icon").addClass("rotate");
   }
 });
+
+$(document).ready(function () {
+
+  const $formWrapper = $(".calculator_page");
+  const $form = $formWrapper.find("#setupForm");
+  const $steps = $form.find(".form-step");
+  let currentStep = 0;
+
+  function showStep(index) {
+      $steps.removeClass("active").eq(index).addClass("active");
+  }
+
+  function validateStep($step) {
+    let valid = true;
+
+    // Only check visible inputs/selects
+    $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
+        const $input = $(this);
+        const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
+        const value = $input.val().trim();
+
+        if (!value) {
+            $container.css("border", "2px solid red");
+            valid = false;
+        } 
+        else if ($input.attr('type') === 'email' && !value.includes('@')) {
+            $container.css("border", "2px solid red");
+            valid = false;
+        } 
+        else {
+            $container.css("border", "1px solid #ccc");
+        }
+    });
+
+    return valid;
+}
+
+  function autoAdvanceSteps() {
+      $steps.each(function (index) {
+          if (validateStep($(this))) {
+              currentStep = index + 1;
+          } else {
+              return false; 
+          }
+      });
+
+      if (currentStep >= $steps.length) currentStep = $steps.length - 1;
+      showStep(currentStep);
+  }
+
+  $formWrapper.on("click", ".next-btn", function () {
+      const $currentStep = $steps.eq(currentStep);
+      if (validateStep($currentStep)) {
+          if (currentStep < $steps.length - 1) {
+              currentStep++;
+              showStep(currentStep);
+          }
+      }
+  });
+
+  $formWrapper.on("click", ".prev-btn", function () {
+      if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+      }
+  });
+
+  $formWrapper.on("click", ".owner-btn", function () {
+      const $container = $(this).closest(".owners_container");
+      const $hiddenInput = $container.find("input[type='hidden']");
+      $container.find(".owner-btn").removeClass("active");
+      $(this).addClass("active");
+      $hiddenInput.val($(this).data("value"));
+      $container.css("border", "1px solid #ccc");
+      const $step = $(this).closest(".form-step");
+      if (validateStep($step)) {
+          const index = $steps.index($step);
+          if (index < $steps.length - 1) {
+              currentStep = index + 1;
+              showStep(currentStep);
+          }
+      }
+  });
+
+  $formWrapper.on("change", "input[type='radio']", function () {
+      const $container = $(this).closest(".office_container");
+      $container.find(".office-btn").removeClass("active");
+      $(this).closest(".office-btn").addClass("active");
+      $container.css("border", "1px solid #ccc");
+      const $step = $(this).closest(".form-step");
+      if (validateStep($step)) {
+          const index = $steps.index($step);
+          if (index < $steps.length - 1) {
+              currentStep = index + 1;
+              showStep(currentStep);
+          }
+      }
+  });
+
+  $formWrapper.on("change keyup", "select, input[type='text'], input[type='email']", function () {
+      const $container = $(this).closest(".input_container").length ? $(this).closest(".input_container") : $(this);
+      if ($(this).val().trim() !== "") {
+          $container.css("border", "1px solid #ccc");
+          const $step = $(this).closest(".form-step");
+          if (validateStep($step)) {
+              const index = $steps.index($step);
+              if (index < $steps.length - 1) {
+                  currentStep = index + 1;
+                  showStep(currentStep);
+              }
+          }
+      }
+  });
+
+  $form.on("submit", function (e) {
+      e.preventDefault();
+      const $currentStep = $steps.eq(currentStep);
+      if (validateStep($currentStep)) {
+          this.submit();
+      }
+  });
+
+  function fetchCountries() {
+      return $.get('/all-countries');
+  }
+  function populateNationalitySelect(countries) {
+      const $select = $form.find('select[name="nationality"]');
+      $select.find('option:not(:first)').remove();
+      countries.forEach(country => {
+          $select.append(`<option value="${country.name}">${country.name}</option>`);
+      });
+  }
+
+ 
+  function populatePhoneDropdown(countries) {
+      const phoneDropdown = $form.find('.dropdown_phone');
+      const phoneInput = $form.find('#phone-input');
+      const defaultCode = '+971';
+      phoneDropdown.empty();
+      phoneDropdown.append(`
+          <div class="dropdown-search-wrapper" style="position: relative; padding: 5px;">
+              <input type="text" class="dropdown-search" placeholder="Search..." 
+                  style="width: calc(100% - 30px); padding-left: 10px; border: 1px solid #ccc; border-radius: 4px;">
+              <img src="/images/search.png" style="position: absolute; width: 20px; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"/>
+          </div>
+      `);
+
+      countries.forEach(country => {
+          const flagUrl = `https://flagcdn.com/w320/${country.code.toLowerCase()}.png`;
+          phoneDropdown.append(`
+              <div class="code" data-flag="${flagUrl}" data-code="${country.dial_code}" data-country="${country.name}" style="padding: 10px; cursor: pointer; display: flex; align-items: center;">
+                  <img src="${flagUrl}" style="width: 20px; height: 15px; margin-right: 10px;">
+                  <div class="name-city">${country.name} <span>${country.dial_code}</span></div>
+              </div>
+          `);
+      });
+
+      phoneInput.attr('placeholder', defaultCode);
+      $form.find('.city_code').on('click', () => phoneDropdown.toggle());
+      phoneDropdown.on('click', '.code', function () {
+        const flagSrc = $(this).data('flag');
+        selectedCode = $(this).data('code'); 
+        $form.find('#selected-flag').attr('src', flagSrc);
+        phoneInput.attr('placeholder', selectedCode);
+        phoneDropdown.hide();
+    });
+      phoneDropdown.on('input', '.dropdown-search', function () {
+          const query = $(this).val().toLowerCase();
+          phoneDropdown.find('.code').each(function () {
+              const countryName = $(this).data('country').toLowerCase();
+              const countryCode = $(this).data('code');
+              $(this).toggle(countryName.includes(query) || countryCode.includes(query));
+          });
+      });
+      phoneInput.on('input', function () {
+        let val = $(this).val().replace(/[^0-9]/g, '');
+        $(this).val(val ? selectedCode + val : selectedCode);
+    });
+  }
+  fetchCountries().done(countries => {
+      populateNationalitySelect(countries);
+      populatePhoneDropdown(countries);
+      autoAdvanceSteps();
+  }).fail(err => {
+      console.error('Failed to load countries:', err);
+  });
+
+});
