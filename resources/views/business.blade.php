@@ -18,18 +18,18 @@
             <img src="/images/bg2.png" class="two"/>
             <img src="/images/bg3.png" class="three"/>
             <div class="main_title"> Business Setup in Dubai</div>
-            
+
         </div>
-        <div class="content"> 
+        <div class="content">
             <div class="text_desc">
-                <div class="title" data-aos="fade-left"> 
+                <div class="title" data-aos="fade-left">
                     Business Setup in Dubai Made Simple.
                 </div>
                 <div class="desc">
                     Dubai is one of the world’s fastest-growing business hubs,
                      attracting entrepreneurs, investors, and global corporations.
                       Whether you are launching a startup or relocating an established company,
-                       Lexium Business Hub provides end-to-end 
+                       Lexium Business Hub provides end-to-end
                     support to make your business setup seamless, compliant, and cost-effective.
                 </div>
             </div>
@@ -50,10 +50,10 @@
                         <div class="img_container">
                             <img src="/images/b1.webp"/>
                         </div>
-                        
+
                     </div>
                     <div class="col" data-aos="fade-up">
-                        
+
                         <div class="flex_col">
                             <div class=" icon">
                                 <img src="/images/free_zone.png">
@@ -68,7 +68,7 @@
                         <div class="img_container">
                             <img src="/images/b2.webp"/>
                         </div>
-                        
+
                     </div>
                     <div class="col" data-aos="fade-up">
                         <div class="flex_col">
@@ -85,12 +85,12 @@
                         <div class="img_container">
                             <img src="/images/b3.webp"/>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="button" >
-                    <a class="btn_link">
-                        Compare Free Zones
+                    <a class="btn_link" href="/cost_calculator">
+                        Cost Calculator
                     </a>
                 </div>
             </div>

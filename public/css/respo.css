@@ -3,7 +3,7 @@
         font-size: 100px;
         top: -4rem;
     }
-    
+
     .about_section .flex_row .img_container .pos{
         font-size: 100px;
     }
@@ -12,10 +12,10 @@
         top: 7rem;
     }
     .home .content .why_dubai .black_bg{
- 
-       
+
+
      grid-template-columns: repeat(2, 1fr);
-     
+
     }
     .about_section .flex_row .grid{
         display: grid;
@@ -28,6 +28,9 @@
     }
 }
 @media (max-width:599px){
+    .calculator_page .content_calculator {
+        width: 100%;
+    }
     .blog_page .grid_container_blogs .col.span_2{
         grid-template-columns: repeat(1,1fr);
     }
@@ -51,7 +54,7 @@
         gap: 1rem;}
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(1, 1fr);
-       
+
       }
      .visas_page .grid_container{
          grid-template-columns: repeat(1, 1fr);
@@ -95,7 +98,7 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
-   
+
     .services_col .grid .col.order_ser .service .flex{
         padding: 1rem;
     }
@@ -113,9 +116,12 @@
     .blogs_section .container .blogs_swiper .single_blog .img_Container{
         width:320px
     }
-   
+
 }
 @media (min-width:768px) and (max-width:990px){
+    .calculator_page .content_calculator {
+        width: 85%;
+    }
     .blog_page .grid_container_blogs .col{
         flex-direction: row;
         align-items: flex-start;
@@ -128,7 +134,7 @@
     }
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(2, 1fr);
-       
+
       }
     .business_page .content_business .grid_container{
         display: grid;
@@ -160,7 +166,7 @@
     .home .content .why_dubai .black_bg{
 
         grid-template-columns: repeat(2, 1fr);
-        
+
        }
     .contact_page .form_contact_us .form_contact .flex_row{
         flex-direction: column;
@@ -194,8 +200,14 @@
     }
 }
 @media (max-width:767px){
-    .blog_details_page .blog_details_cont{
-        grid-template-columns: repeat(1,1fr); 
+
+    .blog_details_page .blog_details_cont,
+    .visas_page .grid_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .visas_page .grid_container .col.img_container img {
+        width: 100%;
+        height: 550px;
     }
     .blog_details_page .content_details{
         width: 90%;
@@ -239,7 +251,7 @@
     .home .content .why_dubai .black_bg{
         grid-template-columns: repeat(1, 1fr);
         gap:3rem
-        
+
        }
     .contact_page .form_contact_us .form_contact .grid_container .col .input_container input{
         width: 95%;
@@ -247,7 +259,7 @@
       }
     .contact_page .form_contact_us .form_contact .grid_container .col ,
     .contact_page .form_contact_us .form_contact .grid_container .col .input_container{
-    
+
         grid-column: span 2;
     }
     /* .contact_page .form_contact_us .form_contact .flex_row{
@@ -290,7 +302,7 @@
     .about_section .flex_row .grid{
         width:100%
     }
-    
+
     .testimonials_section .container .swiper_testi{
         width: calc(100% - 1rem);
     }
@@ -316,7 +328,7 @@
     }
     .about_section .flex_row .text_container .flex_col,
     .about_section .flex_row .text_container{
-      
+
         justify-content: center;
         align-items: center;
     }
@@ -329,7 +341,7 @@
     .contact_whatsapp .pos.flex .img_container{
         width: 80px;
     height: 80px;
-    
+
     top: -37px;
     }
     .services_col .grid{
@@ -340,7 +352,7 @@
         font-size: 17px;
         font-weight: 600;
     }
-  
+
     .banner_swiper .swiper-slide{
         flex-direction: column;
         gap:1.4rem
@@ -349,7 +361,7 @@
     .banner_swiper .text_desc{
         width:100%
     }
-   
+
     .banner_swiper .text_desc{
         gap:1rem
     }
@@ -358,6 +370,9 @@
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .calculator_page .content_calculator {
+        width: 90%;
+    }
     .flex_img{
         grid-column: span 1;
     }
@@ -370,7 +385,7 @@
         gap: 1rem;}
     .banking_page .banking_container .grid_container{
         grid-template-columns: repeat(2, 1fr);
-       
+
       }
     .business_page .content_business .grid_container{
         display: grid;
@@ -382,18 +397,34 @@
         font-size: 80px;
         top: -3rem;
     }
-   
+
 }
 @media(max-width:990px){
-    .blog_page .grid_container_blogs{
+
+    .header .btn_link {
+        font-size: 14px;
+        padding: 0.7rem 0.7rem !important;
+        transition: all 0.3s
+    ease-in-out;
+        width: 153px;
+    }
+    .blog_page .grid_container_blogs,
+    .calculator_page .info_form .shadow_border .grid_container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .calculator_page .info_form .shadow_border .grid_container .col.col_span_2{
+        grid-column: span 1;
+    }
+    .calculator_page .buttons{
+        flex-direction: column;
+        gap: 1.5rem;
     }
     .blog_page .grid_container_blogs .box_content{
         width:90%
     }
     .blog_details_page .banner_contact{
         height:calc(100vh - 110px);
-        
+
     }
 
     .business_page.industries_page .content_business .grid_container{
@@ -406,7 +437,7 @@
     .business_page.industries_page .content_business .grid_container {
         grid-template-columns: repeat(1, 1fr) !important;
         width: 100%!important;
-        
+
       }
       .business_page.industries_page .content_business .grid_container .col.img_container img{
         width: 100%;
@@ -436,7 +467,7 @@
     }
     .banner_swiper .text_desc .title{
         font-size: 35px;
-        
+
     }
     .home .content .flex-col .desc{
         font-size: 17px;
@@ -444,7 +475,7 @@
     .about_section .flex_row .grid .col .number{
         font-size: 38px;
     }
-   
+
     .footer .grid .col:nth-last-of-type(2){
         margin-left: 0;
     }
