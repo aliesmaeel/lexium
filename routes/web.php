@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CountryController;
 Route::get('/', function () {
     return view('homepage');
 });
@@ -43,6 +43,12 @@ Route::get('/blog_details', function () {
     return view('blog_details');
 });
 
+Route::get('/cost_calculator', function () {
+    return view('cost_calculator');
+});
+
+
+Route::get('/all-countries', [CountryController::class, 'getCountries']);
 Route::get('/about', function () {
     return view('about');
 })->name('about');

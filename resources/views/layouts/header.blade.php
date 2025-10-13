@@ -18,7 +18,6 @@
                         <img src="/images/phone.png"/>
                         <span> Hotline: +971563148567</span>
                     </a>
-
                 </div>
             </div>
         </div>
