@@ -5,19 +5,20 @@
                 <div class="flex">
                     <div>Are you ready to grow up your business?</div>
                     <a class="flex" href="#">
-                        <span> Contact Us </span>
+                        <span> Contact Us </span>  
                         <img src="/images/arrow.png"/>
                     </a>
                 </div>
                 <div class="flex_between">
                     <a class="flex" href="#">
-                        <img src="/images/email.png"/>
+                        <img src="/images/email.png"/> 
                         <span>support@invena.com</span>
                     </a>
-                    <a class="flex" href="tel:+971563148567">
-                        <img src="/images/phone.png"/>
-                        <span> Hotline: +971563148567</span>
+                    <a class="flex" href="#">
+                        <img src="/images/phone.png"/> 
+                        <span> Hotline: +210-8976569</span>
                     </a>
+
                 </div>
             </div>
         </div>
@@ -31,16 +32,12 @@
                 <a href="/">Home</a>
                 <a href="/business">Business</a>
                 <a href="/visas">Visas</a>
-                <a href="/banking">Finance</a>
-                <a href="/services">Services</a>
+                <a href="/banking">Banking & Finance</a>
+                <a href="/services">Corporate Services</a>
                 <a href="/industries">Industries</a>
                 <a href="/blog">Resources</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
-                <a class="btn_link" href="/cost_calculator">
-                    Cost Calculator
-                </a>
-                
             </div>
         </div>
     </div>
@@ -66,9 +63,9 @@
                     </a>
                 </li>
                 <li class="desc">
-                    We must explain to you how all seds this mistakens idea denouncing
+                    We must explain to you how all seds this mistakens idea denouncing 
                     pleasures and praising account. All seds this mistakens idea denouncing pleasures.
-
+                
                 </li>
                 <li class="main_list_mobile">
                     <a href="/home">Home</a>
@@ -80,9 +77,6 @@
                     <a href="/blog">Resources</a>
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
-                    <a class="btn_link" href="/cost_calculator">
-                        Cost Calculator
-                    </a>
                 </li>
                 <li class="Get_in_touch">
                     <div class="text">Get In Touch</div>
@@ -93,7 +87,7 @@
                                     <img src="/images/phone_white.png">
                                 </div>
                                 <div class="info_desc">
-                                    <div>+971563148567</div>
+                                    <div>(+256) 2145.2156</div>
                                 </div>
                             </a>
                         </div>
@@ -117,7 +111,7 @@
                                 </div>
                             </a>
                         </div>
-
+                        
                     </div>
                 </li>
             </ul>

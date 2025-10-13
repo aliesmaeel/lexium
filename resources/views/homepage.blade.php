@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </div>
         {{-- end banner --}}
@@ -57,11 +57,11 @@
                 <div class="flex-col">
                     <div class="btn flex">
                         <img src="/images/icon.svg"/>
-                        <div> Business Success Starts Here</div>
+                        <div> Business Success Starts Here</div> 
                     </div>
                     <div class="title" data-aos="fade-left">Start Your Business in Dubai with Confidence.</div>
                     <div class="desc">
-                        Lexium Business Hub is your trusted partner for company formation, Golden Visa, and corporate services in Dubai.
+                        Lexium Business Hub is your trusted partner for company formation, Golden Visa, and corporate services in Dubai. 
                         From business setup to banking, we simplify the process so you can focus on growth.
                     </div>
                     <a class="btn_link" href="#">View Services</a>
@@ -158,7 +158,7 @@
                                             </div>
                                             <div>PRO & Corporate Services</div>
                                         </div>
-
+                                        
                                         <div class="img_container">
                                             <img src="/images/arrow.png" class="black_arrow"/>
                                             <img src="/images/arrow_white.png" class="white_arrow"/>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="col">
                                 <div class="btn">
-                                    <div>Our Services</div>
+                                    <div>Our Services</div> 
                                 </div>
                                 <div class="title" data-aos="fade-left">
                                     EFFECTIVE SERVICES
@@ -177,9 +177,11 @@
                                     we believe in the power of collaboration and personalized solutions. By understanding our
                                     clients' unique needs and goals, we tailor our approach to deliver strategic insights,
                                     creative solutions.
-
+                                
                                 </div>
-
+                                <div class="btn_link all_btn">
+                                    <div>View All Services</div> 
+                                </div>
                                 <img src="/images/08.png" class="arrow">
                             </div>
                         </div>
@@ -193,7 +195,7 @@
                                 <img src="/images/call.png">
                             </div>
                             <div>
-                                Call Us Anytime!<a style="color: white" href="tel:+971563148567">+971563148567</a>
+                                Call Us Anytime!<a>+(125) 2153-2158</a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +210,7 @@
                             <div class="title" data-aos="fade-left">Businesses Through <span>Management</span></div>
                             <div class="desc">
                                 we specialize in providing comprehensive business management solutions
-                                tailored to meet the unique needs of our clients. With years of
+                                tailored to meet the unique needs of our clients. With years of 
                                 experience and a team of dedicated professionals, we help businesses of all sizes streamline.
                             </div>
                             <div class="grid">
@@ -227,7 +229,7 @@
                             </div>
                             <div class="flex_col">
                                 <div class="phone_text">Call Us Anytime!</div>
-                                <a href="tel:+971563148567" class="phone_number">+971563148567</a>
+                                <a href="#" class="phone_number">+(125) 2153-2158</a>
                             </div>
                         </div>
                         <div class="img_container">
@@ -244,7 +246,7 @@
             <div class="content">
                 <div class="flex-col">
                     {{-- phone --}}
-
+                    
                     {{-- start testimonials --}}
                     <div class="testimonials_section">
                         <div class="container">
@@ -260,15 +262,19 @@
                                     <div class="img_container">
                                         <img src="/images/testi.png"/>
                                     </div>
-
+                                    
                                     <div class="swiper swiper_testi">
                                         <div class="swiper-wrapper">
                                             <!-- Slide 1 -->
                                             <div class="swiper-slide relative">
                                                 <div class="flex-col">
                                                     <div class="desc">
-                                                        I can’t recommend Lexium enough. It’s the perfect place for special occasions, date nights, or whenever you’re craving something extraordinary. The mix of impeccable service, stunning ambiance, and world-class cuisine makes it stand out from any other restaurant in town.
-
+                                                        I can't recommend The Gourmet Haven enough. It's a place for
+                                                        special occasions,
+                                                        date nights, or whenever you're in the mood for a culinary
+                                                        adventure. The
+                                                        combination of exceptional.
+                                                    
                                                     </div>
                                                     <div class="flex_row">
                                                         <div class="img_user">
@@ -280,15 +286,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
+                                                
+                                                
                                             </div>
                                             <!-- Slide 2 -->
                                             <div class="swiper-slide relative">
                                                 <div class="flex-col">
                                                     <div class="desc">
-                                                        Lexium is an absolute gem! My partner and I celebrated our anniversary here, and everything was perfect—from the warm welcome to the exquisite dishes. The attention to detail and the romantic atmosphere made the night unforgettable. We can’t wait to come back!
-
+                                                        I can't recommend The Gourmet Haven enough. It's a place for
+                                                        special occasions,
+                                                        date nights, or whenever you're in the mood for a culinary
+                                                        adventure. The
+                                                        combination of exceptional.
+                                                    
                                                     </div>
                                                     <div class="flex_row">
                                                         <div class="img_user">
@@ -300,15 +310,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
+                                                
+                                                
                                             </div>
                                             <!-- Slide 3 -->
                                             <div class="swiper-slide relative">
                                                 <div class="flex-col">
                                                     <div class="desc">
-                                                        Every visit to Lexium feels like a culinary journey. The flavors are bold, creative, and beautifully presented. You can tell the chefs truly care about their craft. It’s my go-to spot whenever I want to treat myself or impress guests.
-
+                                                        I can't recommend The Gourmet Haven enough. It's a place for
+                                                        special occasions,
+                                                        date nights, or whenever you're in the mood for a culinary
+                                                        adventure. The
+                                                        combination of exceptional.
+                                                    
                                                     </div>
                                                     <div class="flex_row">
                                                         <div class="img_user">
@@ -320,13 +334,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
+                                                
+                                                
                                             </div>
                                         </div>
-
+                                        
                                     </div>
-
+                                   
                                 </div>
                             </div>
                         </div>
@@ -340,7 +354,7 @@
                             </div>
                             <div class="main_title" data-aos="fade-left">
                                 Recent blog post
-
+    
                             </div>
                             <div class="swiper blogs_swiper">
                                 <div class="swiper-wrapper">
@@ -427,7 +441,7 @@
                                 </div>
                                 <!-- Pagination -->
                                 <div class="swiper-pagination"></div>
-
+                            
                             </div>
                         </div>
                     </div>
@@ -454,7 +468,7 @@
                     </div>
                     {{-- end Newsletter  --}}
                 </div>
-
+               
             </div>
         </div>
     </div>

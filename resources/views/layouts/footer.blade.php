@@ -20,6 +20,9 @@
                     <a href="#">
                         <img src="/images/instagram.png"/>
                     </a>
+                    <a href="#">
+                        <img src="/images/twitter.png"/>
+                    </a>
                 </div>
             </div>
             <div class="col">
@@ -69,14 +72,14 @@
                     </div>
                 </div>
                 <div class="info">
-                    <a href="tel:+971563148567">
+                    <a href="#">
                         <div class="img_container">
                             <img src="/images/phone_white.png" />
                         </div>
                         <div class="info_desc">
                             <div class="sec">
                                 <div>Call Us 24/7</div>
-                                <div>+971563148567</div>
+                                <div>(+256) 2145.2156</div>
                             </div>
                         </div>
                     </a>
@@ -87,7 +90,7 @@
                         <div class="info_desc">
                             <div class="sec">
                                 <div>Work with us</div>
-                                <div>info@lexium.com</div>
+                                <div>info@Invena.com</div>
                             </div>
                         </div>
                     </a>
@@ -98,7 +101,7 @@
                         <div class="info_desc">
                             <div class="sec">
                                 <div>Our Location</div>
-                                <div> Emaar Business Park, Bldg.4 - Office 502A Shk. Zayed Road - Dubai</div>
+                                <div>XYZ Hilton Street, 125 Town United State</div>
                             </div>
                         </div>
                     </a>
@@ -106,7 +109,7 @@
 
 
             </div>
-
+            
         </div>
         <div class="copyright">
 

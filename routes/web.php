@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::get('/about', function () {
@@ -42,7 +42,3 @@ Route::get('/blog', function () {
 Route::get('/blog_details', function () {
     return view('blog_details'); 
 });
-
-Route::get('/about', function () {
-    return view('about'); 
-})->name('about');
