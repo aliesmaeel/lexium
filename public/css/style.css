@@ -2108,11 +2108,11 @@ grid-template-columns: repeat(2, 1fr);
   color:#5f5f5f;
   cursor: pointer;
 }
-.calculator_page .form-step { 
+/* .calculator_page .form-step { 
   display: none;
   width: 100%;
  }
-.calculator_page .form-step.active { display: block; }
+.calculator_page .form-step.active { display: block; } */
 
 .calculator_page .next-btn,
 .calculator_page .prev-btn,
@@ -2206,4 +2206,83 @@ ease;
   color: white;
   border: none;
 
+}
+.calculator_page  .form-step {
+  display: none;
+  /* opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(30px); */
+}
+.calculator_page  .form-step.active {
+  display: block;
+  /* opacity: 1;
+  transform: translateY(0); */
+}
+.visas_page .grid_container .col.order_ser{
+  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+.visas_page .grid_container .col.order_ser .service{
+  display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.visas_page .grid_container .col.order_ser .service .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
+  border-radius: 9px;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  background: rgb(242, 242, 242);
+  transition: 0.3s ease-in-out;
+ 
+}
+.visas_page .col.order_ser .service .flex:hover div {
+  color: rgb(255, 255, 255);
+}
+.abs_col_mobile{
+  display: none;
+}
+.visas_page .col.order_ser .service .flex:hover .title_desktop{
+  display: none;
+}
+.visas_page .col.order_ser .service .flex:hover {
+  background-image: url(/images/services_bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.visas_page .col.order_ser .service .flex:hover .abs_col_mobile{
+  display: block;
+}
+.visas_page .grid_container .col.order_ser .service .flex .flex_icon{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.visas_page .grid_container .col.order_ser .service .flex .flex_icon div{
+  font-size: 19px;
+    font-weight: 600;
+}
+.visas_page .col.order_ser .service .flex_icon img {
+  width: 55px;
+}
+.visas_page .col.order_ser .service .flex:hover .se_white {
+  display: block;
+}
+.abs_col_mobile .desc{
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  margin-top: 0.5rem;
+}
+.visas_page .col.order_ser .service .se_white {
+  display: none;
+}
+.visas_page .col.order_ser .service .flex:hover .se_black {
+  display: none;
 }

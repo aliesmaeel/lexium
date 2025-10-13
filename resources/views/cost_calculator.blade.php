@@ -38,7 +38,7 @@
                             </select>
                         </div>        
                     </div>
-                    <button type="button" class="next-btn">Next</button>
+                    <button type="button" class="next-btn" data-aos="fade-up">Next</button>
                 </div>
 
                 {{-- Step 2 --}}
@@ -56,7 +56,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -88,7 +88,7 @@
                             <input type="hidden" name="owners" required>
                         </div>
                     </div>
-                    <div class="buttons"> 
+                    <div class="buttons" data-aos="fade-up"> 
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button> 
                     </div>
@@ -119,7 +119,7 @@
                             <input type="hidden" name="visas" required>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>  
                     </div>
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>  
                     </div>
@@ -194,7 +194,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -244,7 +244,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -267,7 +267,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -283,7 +283,7 @@
                             </select>
                         </div>        
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn">Next</button>
                     </div>
@@ -339,7 +339,7 @@
                             </div>
                         </div>        
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button> 
                         <button type="submit" class="submit-btn">Get My Estimate</button>
                     </div>

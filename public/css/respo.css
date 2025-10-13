@@ -201,8 +201,13 @@
 }
 @media (max-width:767px){
   
-    .blog_details_page .blog_details_cont{
+    .blog_details_page .blog_details_cont,
+    .visas_page .grid_container{
         grid-template-columns: repeat(1,1fr); 
+    }
+    .visas_page .grid_container .col.img_container img {
+        width: 100%;
+        height: 550px;
     }
     .blog_details_page .content_details{
         width: 90%;

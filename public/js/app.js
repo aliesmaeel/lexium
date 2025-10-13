@@ -295,13 +295,15 @@ $(document).ready(function () {
   let currentStep = 0;
 
   function showStep(index) {
-      $steps.removeClass("active").eq(index).addClass("active");
-  }
-
+    $steps.removeClass("active").eq(index).addClass("active");
+    const $currentStep = $steps.eq(index);
+    $currentStep.find('[data-aos]').removeClass('aos-animate');
+    setTimeout(() => {
+        AOS.refreshHard(); 
+    }, 100);
+}
   function validateStep($step) {
     let valid = true;
-
-    // Only check visible inputs/selects
     $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
         const $input = $(this);
         const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
