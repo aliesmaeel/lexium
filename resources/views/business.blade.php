@@ -89,8 +89,8 @@
                     </div>
                 </div>
                 <div class="button" >
-                    <a class="btn_link">
-                        Compare Free Zones
+                    <a class="btn_link" href="/cost_calculator">
+                        Cost Calculator
                     </a>
                 </div>
             </div>
