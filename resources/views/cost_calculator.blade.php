@@ -31,12 +31,49 @@
                         <div class="input_container">
                             <select name="activity" required>
                                 <option value="">Select</option>
-                                <option value="trading">Trading</option>
-                                <option value="consulting">Consulting</option>
-                                <option value="technology">Technology</option>
-                                <option value="marketing">Marketing</option>
+                                <option value="Consulting">Consulting</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Food and Beverage">Food and Beverage</option>
+                                <option value="Retail">Retail</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="Apparel">Apparel</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Education">Education</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Media">Media</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Hospitality">Hospitality</option>
+                                <option value="Shipping">Shipping</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Recruitment">Recruitment</option>
+                                <option value="Chemicals">Chemicals</option>
+                                <option value="Sports Management Services">Sports Management Services</option>
+                                <option value="Machinery">Machinery</option>
+                                <option value="Communications">Communications</option>
+                                <option value="Energy">Energy</option>
+                                <option value="Business Accelerator">Business Accelerator</option>
+                                <option value="Banking">Banking</option>
+                                <option value="Telecommunications">Telecommunications</option>
+                                <option value="Utilities">Utilities</option>
+                                <option value="Private Equity">Private Equity</option>
+                                <option value="Venture Capital">Venture Capital</option>
+                                <option value="Recreation">Recreation</option>
+                                <option value="Publishing">Publishing</option>
+                                <option value="Environmental">Environmental</option>
+                                <option value="Biotechnology">Biotechnology</option>
+                                <option value="Not For Profit">Not For Profit</option>
+                                <option value="Insurance">Insurance</option>
+                                <option value="Web3/Crypto">Web3/Crypto</option>
+                                <option value="Government">Government</option>
+                                <option value="Other">Other</option>
                             </select>
-                        </div>        
+                        </div>
                     </div>
                     <button type="button" class="next-btn" data-aos="fade-up">Next</button>
                 </div>
@@ -48,11 +85,13 @@
                         <div class="desc">
                             This will help us determine the potential type of company structure you will need for your company.
                         </div>
-                        <div class="input_container">                             
+                        <div class="input_container">
                             <select name="location" required>
                                 <option value="">Select</option>
                                 <option value="new_company_formation">New company formation</option>
+                                <option value="Expansion plan (ie. new branch or franchise)">Expansion plan (ie. new branch or franchise)</option>
                                 <option value="company_relocation">Company relocation</option>
+                                <option value="visa_purpose_only">Visa purpose only</option>
                             </select>
                         </div>
                     </div>
@@ -69,8 +108,8 @@
                             How many owners/shareholders will your company have?
                         </div>
                         <div class="desc">
-                            The number of owners/shareholders your company will have can help in identifying 
-                            the most suitable legal structure for your company, as well as the number of 
+                            The number of owners/shareholders your company will have can help in identifying
+                            the most suitable legal structure for your company, as well as the number of
                             residence visas you will require.
                         </div>
 
@@ -88,9 +127,9 @@
                             <input type="hidden" name="owners" required>
                         </div>
                     </div>
-                    <div class="buttons" data-aos="fade-up"> 
+                    <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button> 
+                        <button type="button" class="next-btn">Next</button>
                     </div>
                 </div>
 
@@ -121,7 +160,7 @@
                     </div>
                     <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>  
+                        <button type="button" class="next-btn">Next</button>
                     </div>
                 </div>
 
@@ -132,7 +171,7 @@
                         <div class="desc">
                             Dependants include your family members, nanny or other household staff you may personally employ.
                         </div>
-                
+
                         <div class="input_container office_container p_1" data-name="office_type">
                             <div class="office_buttons">
                                 <label class="office-btn">
@@ -160,7 +199,7 @@
                     </div>
                     <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>  
+                        <button type="button" class="next-btn">Next</button>
                     </div>
                 </div>
 
@@ -171,7 +210,7 @@
                         <div class="desc">
                             Depending on the nature of your business, will you need a flexi-desk, a co-working space or an entire office space? This is an important factor in calculating your total setup cost.
                         </div>
-                
+
                         <div class="input_container office_container p_1" data-name="business_plan">
                             <div class="office_buttons">
                                 <label class="office-btn">
@@ -190,7 +229,7 @@
                                     <input type="radio" name="business_plan" value="6 Month">
                                     <span>6 Month</span>
                                 </label>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -207,7 +246,7 @@
                         <div class="desc">
                             This will have the biggest impact on your final proposal, but is also required based on your choice of activity and whether you need to be based in the mainland or not.
                         </div>
-                
+
                         <div class="input_container office_container p_1" data-name="preferred_jurisdiction">
                             <div class="office_buttons">
                                 <label class="office-btn">
@@ -279,9 +318,9 @@
                         <div class="title">What's your nationality?</div>
                         <div class="input_container ">
                             <select name="nationality" required>
-                                <option value="">Select</option> 
+                                <option value="">Select</option>
                             </select>
-                        </div>        
+                        </div>
                     </div>
                     <div class="buttons" data-aos="fade-up">
                         <button type="button" class="prev-btn">Previous</button>
@@ -337,10 +376,10 @@
                                     <div class="dropdown_phone" style="display:none;"></div>
                                 </div>
                             </div>
-                        </div>        
+                        </div>
                     </div>
                     <div class="buttons" data-aos="fade-up">
-                        <button type="button" class="prev-btn">Previous</button> 
+                        <button type="button" class="prev-btn">Previous</button>
                         <button type="submit" class="submit-btn">Get My Estimate</button>
                     </div>
                 </div>

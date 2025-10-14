@@ -302,28 +302,40 @@ $(document).ready(function () {
         AOS.refreshHard();
     }, 100);
 }
-  function validateStep($step) {
-    let valid = true;
-    $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
-        const $input = $(this);
-        const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
-        const value = $input.val().trim();
+    function validateStep($step) {
+        let valid = true;
 
-        if (!value) {
-            $container.css("border", "2px solid red");
-            valid = false;
-        }
-        else if ($input.attr('type') === 'email' && !value.includes('@')) {
-            $container.css("border", "2px solid red");
-            valid = false;
-        }
-        else {
-            $container.css("border", "1px solid #ccc");
-        }
-    });
+        $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
+            const $input = $(this);
+            const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
+            const value = $input.val().trim();
 
-    return valid;
-}
+            if (!value) {
+                $container.css("border", "2px solid red");
+                valid = false;
+            } else if ($input.attr('type') === 'email' && !value.includes('@')) {
+                $container.css("border", "2px solid red");
+                valid = false;
+            } else {
+                $container.css("border", "1px solid #ccc");
+            }
+        });
+
+        // ✅ Additional validation for radio groups (like office_type)
+        $step.find(".office_container").each(function () {
+            const $container = $(this);
+            const $checked = $container.find("input[type='radio']:checked");
+            if ($checked.length === 0) {
+                $container.css("border", "2px solid red");
+                valid = false;
+            } else {
+                $container.css("border", "1px solid #ccc");
+            }
+        });
+
+        return valid;
+    }
+
 
   function autoAdvanceSteps() {
       $steps.each(function (index) {
@@ -363,44 +375,29 @@ $(document).ready(function () {
       $hiddenInput.val($(this).data("value"));
       $container.css("border", "1px solid #ccc");
       const $step = $(this).closest(".form-step");
-      if (validateStep($step)) {
-          const index = $steps.index($step);
-          if (index < $steps.length - 1) {
-              currentStep = index + 1;
-              showStep(currentStep);
-          }
-      }
+
   });
 
-  $formWrapper.on("change", "input[type='radio']", function () {
-      const $container = $(this).closest(".office_container");
-      $container.find(".office-btn").removeClass("active");
-      $(this).closest(".office-btn").addClass("active");
-      $container.css("border", "1px solid #ccc");
-      const $step = $(this).closest(".form-step");
-      if (validateStep($step)) {
-          const index = $steps.index($step);
-          if (index < $steps.length - 1) {
-              currentStep = index + 1;
-              showStep(currentStep);
-          }
-      }
-  });
 
-  $formWrapper.on("change keyup", "select, input[type='text'], input[type='email']", function () {
-      const $container = $(this).closest(".input_container").length ? $(this).closest(".input_container") : $(this);
-      if ($(this).val().trim() !== "") {
-          $container.css("border", "1px solid #ccc");
-          const $step = $(this).closest(".form-step");
-          if (validateStep($step)) {
-              const index = $steps.index($step);
-              if (index < $steps.length - 1) {
-                  currentStep = index + 1;
-                  showStep(currentStep);
-              }
-          }
-      }
-  });
+
+
+
+    $formWrapper.on("change", "input[name='office_type']", function () {
+        const $container = $(this).closest(".office_container");
+        $container.find(".office-btn").removeClass("active");
+        $(this).closest(".office-btn").addClass("active");
+        $container.css("border", "1px solid #ccc");
+    });
+
+
+
+    $formWrapper.on("change keyup", "select, input[type='text'], input[type='email']", function () {
+        const $container = $(this).closest(".input_container").length ? $(this).closest(".input_container") : $(this);
+        if ($(this).val().trim() !== "") {
+            $container.css("border", "1px solid #ccc");
+        }
+    });
+
 
   $form.on("submit", function (e) {
       e.preventDefault();
@@ -463,8 +460,6 @@ $(document).ready(function () {
           });
       });
       phoneInput.on('input', function () {
-        let val = $(this).val().replace(/[^0-9]/g, '');
-        $(this).val(val ? selectedCode + val : selectedCode);
     });
   }
   fetchCountries().done(countries => {
