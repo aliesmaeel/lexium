@@ -21,7 +21,7 @@
                         <img src="/images/buildings.jpg" alt="Dubai skyline with business professionals" class="img_swiper">
                         <div class="text_desc">
                         <div class="title">Launch Your Business in Dubai with Confidence</div>
-                        <a href="#" class="btn">
+                        <a href="#" class="btn apply_btn">
                             Start Your Company
                         </a>
                         </div>
@@ -31,7 +31,7 @@
                         <img src="/images/family.jpg" alt="Luxury Dubai lifestyle / family" class="img_swiper">
                         <div class="text_desc">
                         <div class="title">Golden Visa & Residency – Secure Your Future in the UAE</div>
-                        <a href="#" class="btn">
+                        <a href="#" class="btn apply_btn">
                             Apply Today
                         </a>
                         </div>
@@ -41,13 +41,20 @@
                         <img src="/images/work.jpg" alt="Team working in modern Dubai office" class="img_swiper">
                         <div class="text_desc">
                         <div class="title">Corporate Services That Let You Focus on Growth</div>
-                        <a href="#" class="btn">
+                        <a href="/services" class="btn">
                             Explore Services
                         </a>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <!-- Overlay -->
+            <div class="overlay"></div>
+
+            <!-- Popup -->
+            <div class="popup">
+                @include('popup')
             </div>
         </div>
         {{-- end banner --}}

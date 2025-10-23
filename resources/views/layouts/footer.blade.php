@@ -7,8 +7,7 @@
                     <img src="/images/logo.png">
                 </div>
                 <div class="desc_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur alias laboriosam voluptatum inventore rerum, minus iure ut modi omnis, illum velit iste itaque optio assumenda! Labore nostrum eum aspernatur a!
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, eveniet placeat! Voluptatem minima explicabo non nostrum modi tempore beatae nihil mollitia possimus ullam? Id eum perspiciatis quod eaque minima reprehenderit.
+                    Lexium Business Hub LLC is founded by experienced entrepreneurs who understand the challenges of starting and scaling businesses in Dubai. With transparency, trust, and deep expertise, we deliver tailored solutions that make your business journey smooth and successful. Unlike large one-size-fits-all agencies, we provide a boutique approach, ensuring every client receives dedicated guidance.
                 </div>
                 <div class="social_icons">
                     <a href="#">

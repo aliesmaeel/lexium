@@ -53,11 +53,18 @@
                 </div>
             </div>
            
-            <div class="button">
+            <div class="button apply_btn">
                 <a class="btn_link">
                     Open Your Business Bank Account
                 </a>
             </div>
+             <!-- Overlay -->
+             <div class="overlay"></div>
+
+             <!-- Popup -->
+             <div class="popup">
+                 @include('popup')
+             </div>
         </div>
     </div>
     @endsection

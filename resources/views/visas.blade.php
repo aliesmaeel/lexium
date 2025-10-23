@@ -85,10 +85,17 @@
                 </div>
             </div>
 
-            <div class="button">
+            <div class="button apply_btn" >
                 <a class="btn_link">
                     Apply for Golden Visa
                 </a>
+            </div>
+            <!-- Overlay -->
+            <div class="overlay"></div>
+
+            <!-- Popup -->
+            <div class="popup">
+                @include('popup')
             </div>
         </div>
     </div>
