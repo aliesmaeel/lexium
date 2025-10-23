@@ -12,7 +12,7 @@
                 <div class="flex_between">
                     <a class="flex" href="#">
                         <img src="/images/email.png"/>
-                        <span>support@invena.com</span>
+                        <span>info@lexium.com</span>
                     </a>
                     <a class="flex" href="tel:+971563148567">
                         <img src="/images/phone.png"/>

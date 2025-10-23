@@ -1975,7 +1975,8 @@ grid-template-columns: repeat(2, 1fr);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2rem;
   border-radius: 12px;
-  display: flex
+  display: flex;
+    z-index: 2;
 ;
   flex-direction: column;
   justify-content: flex-start;
@@ -1986,6 +1987,8 @@ grid-template-columns: repeat(2, 1fr);
 }
 .calculator_page .info_form .shadow_border {
   height: 100%;
+    position: relative;
+    z-index: 1;
 }
 .calculator_page .info_form .shadow_border  .grid_container{
   display: grid;
@@ -2285,6 +2288,10 @@ ease;
 }
 .visas_page .col.order_ser .service .flex:hover .se_black {
   display: none;
+}
+.buttons {
+    position: relative !important;
+    z-index: 0 !important;
 }
 .about_section{
   display: none;
