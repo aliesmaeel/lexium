@@ -307,21 +307,39 @@ $(document).ready(function () {
 
         $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
             const $input = $(this);
-            const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
+            const $container = $input.closest(".input_container").length
+                ? $input.closest(".input_container")
+                : $input;
             const value = $input.val().trim();
 
+            // 👇 Determine the input name or type
+            const name = $input.attr('name');
+            const type = $input.attr('type');
+
+            // Default border reset
+            $container.css("border", "1px solid #ccc");
+
+            // 👇 Validation rules
             if (!value) {
                 $container.css("border", "2px solid red");
                 valid = false;
-            } else if ($input.attr('type') === 'email' && !value.includes('@')) {
+
+            } else if (type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                // Email validation
                 $container.css("border", "2px solid red");
                 valid = false;
-            } else {
-                $container.css("border", "1px solid #ccc");
+
+            } else if (name === 'phone' || name === 'phone_number' || $input.attr('id') === 'phone-input') {
+                // Phone validation: only digits and min length 6–15
+                const phoneRegex = /^\+?\d{6,15}$/;
+                if (!phoneRegex.test(value)) {
+                    $container.css("border", "2px solid red");
+                    valid = false;
+                }
             }
         });
 
-        // ✅ Additional validation for radio groups (like office_type)
+        // ✅ Radio group validation
         $step.find(".office_container").each(function () {
             const $container = $(this);
             const $checked = $container.find("input[type='radio']:checked");
@@ -336,7 +354,8 @@ $(document).ready(function () {
         return valid;
     }
 
-  function autoAdvanceSteps() {
+
+    function autoAdvanceSteps() {
       $steps.each(function (index) {
           if (validateStep($(this))) {
               currentStep = index + 1;
@@ -398,13 +417,15 @@ $(document).ready(function () {
     });
 
 
-  $form.on("submit", function (e) {
-      e.preventDefault();
-      const $currentStep = $steps.eq(currentStep);
-      if (validateStep($currentStep)) {
-          this.submit();
-      }
-  });
+    $form.on("submit", function (e) {
+        e.preventDefault();
+        const $currentStep = $steps.eq(currentStep);
+        if (validateStep($currentStep)) {
+            $form.off("submit"); // ✅ prevent double submit
+            this.submit();
+        }
+    });
+
 
   function fetchCountries() {
       return $.get('/all-countries');
@@ -422,10 +443,11 @@ $(document).ready(function () {
       const phoneDropdown = $form.find('.dropdown_phone');
       const phoneInput = $form.find('#phone-input');
       const defaultCode = '+971';
+
       phoneDropdown.empty();
       phoneDropdown.append(`
           <div class="dropdown-search-wrapper" style="position: relative; padding: 5px;">
-              <input type="text" class="dropdown-search" placeholder="Search..."
+              <input type="text" name="search" value="+971" class="dropdown-search" placeholder="Search..."
                   style="width: calc(100% - 30px); padding-left: 10px; border: 1px solid #ccc; border-radius: 4px;">
               <img src="/images/search.png" style="position: absolute; width: 20px; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"/>
           </div>

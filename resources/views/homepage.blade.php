@@ -174,9 +174,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="btn">
-                                    <div>Our Services</div>
-                                </div>
+
                                 <div class="title" data-aos="fade-left">
                                     EFFECTIVE SERVICES
                                 </div>
@@ -196,9 +194,9 @@
                     <div class="contact_whatsapp">
                         <div class="pos flex">
                             <div>Do You Need Any Kind Of Work?</div>
-                            <div class="img_container">
+                            <a href="tel:+971563148567" class="img_container">
                                 <img src="/images/call.png">
-                            </div>
+                            </a>
                             <div>
                                 Call Us Anytime!<a style="color: white" href="tel:+971563148567">+971563148567</a>
                             </div>
