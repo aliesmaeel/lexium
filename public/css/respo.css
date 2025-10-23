@@ -192,7 +192,7 @@
 .contact_whatsapp .pos.flex .img_container{
     width:80px;
     height:80px 
-}
+} 
     .home .content .why_dubai .black_bg{
         display: grid;
         grid-template-columns: repeat(2,1fr);
