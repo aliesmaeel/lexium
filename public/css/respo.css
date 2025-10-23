@@ -200,7 +200,23 @@
     }
 }
 @media (max-width:767px){
-  
+    .popup .abs_container .popup_form{
+        grid-template-columns: repeat(1,1fr); 
+        gap: 1.5rem;
+    }
+    .popup {
+        width: 92%;
+    }
+    .popup .abs_container .popup_form .input_container textarea {
+        height: 72px;
+    }
+    .popup .abs_container .popup_form .input_container input, .popup .abs_container .popup_form .input_container textarea{
+        margin-top: 0.5rem;
+    }
+
+    .popup .abs_container .popup_form .span_2 {
+        grid-column: span 1;
+    }
     .blog_details_page .blog_details_cont,
     .visas_page .grid_container{
         grid-template-columns: repeat(1,1fr); 

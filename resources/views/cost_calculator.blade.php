@@ -339,7 +339,7 @@
                             </div>
                         </div>        
                     </div>
-                    <div class="buttons" data-aos="fade-up">
+                    <div class="buttons" >
                         <button type="button" class="prev-btn">Previous</button> 
                         <button type="submit" class="submit-btn">Get My Estimate</button>
                     </div>

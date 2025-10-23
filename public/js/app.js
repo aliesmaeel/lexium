@@ -302,27 +302,33 @@ $(document).ready(function () {
         AOS.refreshHard(); 
     }, 100);
 }
-  function validateStep($step) {
-    let valid = true;
-    $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
-        const $input = $(this);
-        const $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
-        const value = $input.val().trim();
+function validateStep($step) {
+  let valid = true;
 
-        if (!value) {
-            $container.css("border", "2px solid red");
-            valid = false;
-        } 
-        else if ($input.attr('type') === 'email' && !value.includes('@')) {
-            $container.css("border", "2px solid red");
-            valid = false;
-        } 
-        else {
-            $container.css("border", "1px solid #ccc");
-        }
-    });
+  $step.find("select, input[type='text'], input[type='email'], input[type='hidden']").each(function () {
+      var $input = $(this);
+      var $container = $input.closest(".input_container").length ? $input.closest(".input_container") : $input;
+      var value = $input.val().trim();
+      var name = $input.attr("name");
+      $container.css("border", "1px solid #ccc");
+      if (!value) {
+          $container.css("border", "2px solid red");
+          valid = false;
+      } 
+      else if ($input.attr('type') === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          $container.css("border", "2px solid red");
+          valid = false;
+      } 
+      else if (name === 'phone_number') {
+          const cleaned = value.replace(/\s+/g, '');
+          if (!/^\+?\d{7,15}$/.test(cleaned)) {
+              $container.css("border", "2px solid red");
+              valid = false;
+          }
+      }
+  });
 
-    return valid;
+  return valid;
 }
 
   function autoAdvanceSteps() {
@@ -423,50 +429,62 @@ $(document).ready(function () {
 
  
   function populatePhoneDropdown(countries) {
-      const phoneDropdown = $form.find('.dropdown_phone');
-      const phoneInput = $form.find('#phone-input');
-      const defaultCode = '+971';
-      phoneDropdown.empty();
-      phoneDropdown.append(`
-          <div class="dropdown-search-wrapper" style="position: relative; padding: 5px;">
-              <input type="text" class="dropdown-search" placeholder="Search..." 
-                  style="width: calc(100% - 30px); padding-left: 10px; border: 1px solid #ccc; border-radius: 4px;">
-              <img src="/images/search.png" style="position: absolute; width: 20px; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"/>
-          </div>
-      `);
+    const phoneDropdown = $form.find('.dropdown_phone');
+    const phoneInput = $form.find('#phone-input');
+    const defaultCode = '+971';
+    let selectedCode = defaultCode; 
 
-      countries.forEach(country => {
-          const flagUrl = `https://flagcdn.com/w320/${country.code.toLowerCase()}.png`;
-          phoneDropdown.append(`
-              <div class="code" data-flag="${flagUrl}" data-code="${country.dial_code}" data-country="${country.name}" style="padding: 10px; cursor: pointer; display: flex; align-items: center;">
-                  <img src="${flagUrl}" style="width: 20px; height: 15px; margin-right: 10px;">
-                  <div class="name-city">${country.name} <span>${country.dial_code}</span></div>
-              </div>
-          `);
-      });
+    phoneDropdown.empty();
+    phoneDropdown.append(`
+        <div class="dropdown-search-wrapper" style="position: relative; padding: 5px;">
+            <input type="text" class="dropdown-search" placeholder="Search..." 
+                style="width: calc(100% - 30px); padding-left: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <img src="/images/search.png" style="position: absolute; width: 20px; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"/>
+        </div>
+    `);
 
-      phoneInput.attr('placeholder', defaultCode);
-      $form.find('.city_code').on('click', () => phoneDropdown.toggle());
-      phoneDropdown.on('click', '.code', function () {
-        const flagSrc = $(this).data('flag');
-        selectedCode = $(this).data('code'); 
-        $form.find('#selected-flag').attr('src', flagSrc);
-        phoneInput.attr('placeholder', selectedCode);
-        phoneDropdown.hide();
+    countries.forEach(country => {
+        const flagUrl = `https://flagcdn.com/w320/${country.code.toLowerCase()}.png`;
+        phoneDropdown.append(`
+            <div class="code" data-flag="${flagUrl}" data-code="${country.dial_code}" data-country="${country.name}" style="padding: 10px; cursor: pointer; display: flex; align-items: center;">
+                <img src="${flagUrl}" style="width: 20px; height: 15px; margin-right: 10px;">
+                <div class="name-city">${country.name} <span>${country.dial_code}</span></div>
+            </div>
+        `);
     });
-      phoneDropdown.on('input', '.dropdown-search', function () {
-          const query = $(this).val().toLowerCase();
-          phoneDropdown.find('.code').each(function () {
-              const countryName = $(this).data('country').toLowerCase();
-              const countryCode = $(this).data('code');
-              $(this).toggle(countryName.includes(query) || countryCode.includes(query));
-          });
-      });
-      phoneInput.on('input', function () {
-        let val = $(this).val().replace(/[^0-9]/g, '');
-        $(this).val(val ? selectedCode + val : selectedCode);
+
+    phoneInput.attr('placeholder', defaultCode);
+    $form.find('.city_code').on('click', () => phoneDropdown.toggle());
+    phoneDropdown.on('click', '.code', function () {
+      const flagSrc = $(this).data('flag');
+      selectedCode = $(this).data('code'); 
+      $form.find('#selected-flag').attr('src', flagSrc);
+      let currentVal = phoneInput.val().replace(/[^\d]/g, '');
+      let numberWithoutCode = currentVal.replace(/^\d{1,4}/, '');
+      phoneInput.val(selectedCode + numberWithoutCode);
+  
+      phoneDropdown.hide();
+  });
+
+    phoneDropdown.on('input', '.dropdown-search', function () {
+        const query = $(this).val().toLowerCase();
+        phoneDropdown.find('.code').each(function () {
+            const countryName = $(this).data('country').toLowerCase();
+            const countryCode = $(this).data('code');
+            $(this).toggle(countryName.includes(query) || countryCode.includes(query));
+        });
     });
-  }
+
+    phoneInput.on('input', function () {
+      let val = $(this).val();
+      val = val.replace(/[^\d]/g, '');
+      if (!val.startsWith(selectedCode.replace('+', ''))) {
+          val = selectedCode.replace('+', '') + val;
+      }
+      $(this).val('+' + val);
+  });
+}
+
   fetchCountries().done(countries => {
       populateNationalitySelect(countries);
       populatePhoneDropdown(countries);
@@ -475,4 +493,62 @@ $(document).ready(function () {
       console.error('Failed to load countries:', err);
   });
 
+});
+var popup = $(".popup");
+var overlay = $(".overlay");
+
+$(".apply_btn").on("click", function(e) {
+  e.preventDefault();
+  popup.fadeIn(300);
+  overlay.fadeIn(300);
+});
+
+$(".overlay").on("click", function() {
+  popup.fadeOut(300);
+  overlay.fadeOut(300);
+});
+
+$(document).ready(function() {
+  // Validate
+  $(".popup_form input, .popup_form textarea").on("change", function() {
+    let value = $(this).val().trim();
+    let fieldName = $(this).attr("name");
+    let errorMsg = $(this).siblings(".error-message");
+    let isValid = true;
+    $(this).removeClass("error-border");
+    errorMsg.hide().text("");
+    if (value === "") {
+      errorMsg.text("This field is required.").show();
+      $(this).addClass("error-border");
+      isValid = false;
+    } 
+  
+    else if (fieldName === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      errorMsg.text("Please enter a valid email address.").show();
+      $(this).addClass("error-border");
+      isValid = false;
+    } 
+   
+    else if (fieldName === "phone" && !/^\d{7,15}$/.test(value)) {
+      errorMsg.text("Please enter a valid phone number.").show();
+      $(this).addClass("error-border");
+      isValid = false;
+    }
+
+    return isValid;
+  });
+
+  $(".popup_form").on("submit", function(e) {
+    let valid = true;
+    $(".popup_form input, .popup_form textarea").each(function() {
+      $(this).trigger("change");
+      if ($(this).siblings(".error-message").is(":visible")) {
+        valid = false;
+      }
+    });
+
+    if (!valid) {
+      e.preventDefault(); 
+    }
+  });
 });
