@@ -22,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title"> 
+                <div class="title sft_font"> 
                     Guides, Insights & Tools to Build Your Business.
                 </div>
                 <div class="desc">

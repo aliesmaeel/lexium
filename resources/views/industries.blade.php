@@ -22,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title" data-aos="fade-left"> 
+                <div class="title sft_font" data-aos="fade-left"> 
                     Trusted Across Industries in Dubai.
                 </div>
                 <div class="desc">

@@ -1,7 +1,7 @@
 @media(max-width:1199px) and (min-width:991px){
     .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
         font-size: 100px;
-        top: -4rem;
+        top: -4.7rem;
     }
 
     .about_section .flex_row .img_container .pos{
@@ -30,6 +30,9 @@
 @media (max-width:599px){
     .calculator_page .content_calculator {
         width: 100%;
+    }
+    .services_col .grid .col.order_ser .service .flex div{
+        font-size: 15px !important;
     }
     .blog_page .grid_container_blogs .col.span_2{
         grid-template-columns: repeat(1,1fr);
@@ -84,7 +87,7 @@
       }
     .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
         font-size: 50px;
-        top: -2rem;
+        top: -2.6rem;
     }
     .testimonials_section .container .dark_bg .flex .img_container {
         width: 60%;
@@ -119,6 +122,10 @@
 
 }
 @media (min-width:768px) and (max-width:990px){
+    .services_col .grid .col.order_ser .service .flex{
+        width: 80%;
+    margin: 0 auto;
+    }
     .calculator_page .content_calculator {
         width: 85%;
     }
@@ -144,7 +151,7 @@
       }
     .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
         font-size: 100px;
-        top: -4rem;
+        top: -4.7rem;
     }
     .about_section .flex_row{
         flex-direction: column;
@@ -200,6 +207,9 @@
     }
 }
 @media (max-width:767px){
+    /* .services_col .grid .col.order_ser .service .flex{
+        height: fit-content;
+    } */
     .popup .abs_container .popup_form{
         grid-template-columns: repeat(1,1fr);
         gap: 1.5rem;
@@ -411,7 +421,7 @@
       }
     .contact_page .banner_contact .main_title::after, .banner_about .main_title::after{
         font-size: 80px;
-        top: -3rem;
+        top: -4.2rem;
     }
 
 }

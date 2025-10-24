@@ -2,40 +2,51 @@
   font-family: 'Poppins-Bold';
   font-style: black;
   font-display: black;
-  src: url('../font/Poppins-Bold.ttf') format('truetype');
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
 
 }
 @font-face {
   font-family: 'Poppins-SemiBold';
   font-style: black;
   font-display: black;
-  src: url('../font/Poppins-SemiBold.ttf') format('truetype');
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
 
 }
 @font-face {
   font-family: 'Poppins-Regular';
   font-style: black;
   font-display: black;
-  src: url('../font/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 
 }
 @font-face {
   font-family: 'Poppins-Light';
   font-style: black;
   font-display: black;
-  src: url('../font/Poppins-Light.ttf') format('truetype');
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
 
 }
 
+
+@font-face {
+  font-family: 'SFT-Bold';
+  font-style: black;
+  font-display: black;
+  src: url('../fonts/SFT-Schrifted-Serif-TRIAL-Bold.otf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'SFT-Regular';
+  font-style: black;
+  font-display: black;
+  src: url('../fonts/SFT-Schrifted-Serif-TRIAL-Regular.otf') format('truetype');
+
+}
 *{
   font-family:'Poppins-Regular' ;
 }
 
-
-
-* {
-  font-family: "Montserrat", Sans-serif;
-}
 a{
   text-decoration: none;
 }
@@ -327,7 +338,7 @@ bottom:0rem
 .banner_swiper .text_desc .title{
 
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   text-align: center;
 
@@ -512,10 +523,12 @@ cursor: pointer;
       background: #F2F2F2;
       color:#000;
       transition: all 0.3s ease-in-out;
+      /* height:150px */
 }
 .services_col .grid .col.order_ser .service .flex .img_container{
   width: 65px;
   background-color: #000;
+
   display: flex
 ;
   justify-content: center;
@@ -536,7 +549,8 @@ cursor: pointer;
 .services_col .grid .col.order_ser .service .flex_icon{
   display: flex;
   align-items: center;
-  gap:1.5rem
+  gap:1.5rem;
+
 }
 .contact_whatsapp{
   width: 100%;
@@ -583,13 +597,23 @@ cursor: pointer;
   padding-left: 0.5rem;
 }
 .services_col .grid .col.order_ser .service .flex:hover{
-  background-image: url(/images/services_bg.webp);
+  /* background-image: url(/images/services_bg.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-
+  
 }
+.services_col .grid .col.order_ser .service .flex:first-of-type:hover{
+  background-image: url(/images/b_setup.png);
+}
+.services_col .grid .col.order_ser .service .flex:nth-of-type(2):hover{
+  background-image: url(/images/g_visa.png);
+}
+.services_col .grid .col.order_ser .service .flex:nth-of-type(3):hover{
+  background-image: url(/images/banking_f.png);
+}
+
 .se_white{
   display: none;
 }
@@ -1217,7 +1241,7 @@ linear infinite;
   letter-spacing: 0;
   left: 50%;
   z-index: -1;
-  top: -5rem;
+  top: -5.7rem;
   min-width: max-content;
   color: transparent;
   -webkit-text-stroke-width: 1px;
@@ -1235,18 +1259,24 @@ linear infinite;
 }
 .contact_page.business_page.industries_page .main_title::after{
   content: "Industries" !important;
+  font-family: 'SFT-Regular';
 }
 .contact_page.business_page .main_title::after{
   content: "Business" !important;
+  font-family: 'SFT-Regular';
 }
 .contact_page.blog_page .main_title::after{
   content: "Blog" !important;
+  font-family: 'SFT-Regular';
 }
 .banner_about .main_title::after{
   content: 'ABOUT US';
+  font-family: 'SFT-Regular';
+  
 }
 .contact_page .banner_contact .main_title::after{
   content: 'CONTACT US';
+  font-family: 'SFT-Regular';
 }
 .banner_about .main_title,
 .contact_page .banner_contact .main_title{
@@ -1255,6 +1285,7 @@ linear infinite;
   position: relative;
   width: 80%;
   text-align: center;
+  font-family: 'SFT-Regular';
 }
 .about_page .text_desc,
 .contact_page .text_desc{
@@ -1948,7 +1979,7 @@ grid-template-columns: repeat(2, 1fr);
   font-size: 14px;
   padding: 0.7rem 0.7rem !important;
   transition: all 0.3s ease-in-out;
-  width: 110px;
+  width: 120px;
 }
 .header  .btn_link:hover{
   color: #c9c9c9 !important;
@@ -2255,10 +2286,19 @@ ease;
   display: none;
 }
 .visas_page .col.order_ser .service .flex:hover {
-  background-image: url(/images/services_bg.webp);
+  /* background-image: url(/images/services_bg.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+.visas_page .col.order_ser .service .flex:first-of-type:hover{
+  background-image: url(/images/g_visa.png);
+}
+.visas_page .col.order_ser .service .flex:nth-of-type(2):hover{
+  background-image: url(/images/family_visa.png);
+}
+.visas_page .col.order_ser .service .flex:nth-of-type(3):hover{
+  background-image: url(/images/em_visa.png);
 }
 .visas_page .col.order_ser .service .flex:hover .abs_col_mobile{
   display: block;
@@ -2369,3 +2409,38 @@ ease;
 
   padding-top: 0.3rem;
 }
+.sft_font{
+  font-family: 'SFT-Regular';
+
+}
+
+.services_col .grid .col.order_ser .service .flex:nth-of-type(4):hover{
+  background-image: url(/images/b_ser.png);
+}
+.services_col .grid .col.order_ser .service .flex,
+.visas_page .grid_container .col.order_ser .service .flex{
+  position: relative;
+}
+.services_col .grid .col.order_ser .service .flex::after,
+.visas_page .grid_container .col.order_ser .service .flex::after{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  content:"";
+  display: none;
+}
+.services_col .grid .col.order_ser .service .flex:hover:after,
+.visas_page .grid_container .col.order_ser .service .flex:hover::after{
+  display: block;
+}
+.services_col .grid .col.order_ser .service .flex .img_container,
+.visas_page .grid_container .col.order_ser .service .flex .flex_icon,
+.services_col .grid .col.order_ser .service .flex_icon{
+  position: relative;
+  z-index: 1;
+}
+
