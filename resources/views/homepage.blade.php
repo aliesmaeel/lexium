@@ -20,7 +20,7 @@
                     <div class="swiper-slide relative">
                         <img src="/images/buildings.jpg" alt="Dubai skyline with business professionals" class="img_swiper">
                         <div class="text_desc">
-                        <div class="title">Launch Your Business in Dubai with Confidence</div>
+                        <div class="title sft_font">Launch Your Business in Dubai with Confidence</div>
                         <a href="#" class="btn apply_btn">
                             Start Your Company
                         </a>
@@ -30,7 +30,7 @@
                     <div class="swiper-slide relative">
                         <img src="/images/family.jpg" alt="Luxury Dubai lifestyle / family" class="img_swiper">
                         <div class="text_desc">
-                        <div class="title">Golden Visa & Residency – Secure Your Future in the UAE</div>
+                        <div class="title sft_font">Golden Visa & Residency – Secure Your Future in the UAE</div>
                         <a href="#" class="btn apply_btn">
                             Apply Today
                         </a>
@@ -40,7 +40,7 @@
                     <div class="swiper-slide relative">
                         <img src="/images/work.jpg" alt="Team working in modern Dubai office" class="img_swiper">
                         <div class="text_desc">
-                        <div class="title">Corporate Services That Let You Focus on Growth</div>
+                        <div class="title sft_font">Corporate Services That Let You Focus on Growth</div>
                         <a href="/services" class="btn">
                             Explore Services
                         </a>
@@ -66,7 +66,7 @@
                         <img src="/images/icon.svg"/>
                         <div> Business Success Starts Here</div>
                     </div>
-                    <div class="title" data-aos="fade-left">Start Your Business in Dubai with Confidence.</div>
+                    <div class="title sft_font" data-aos="fade-left">Start Your Business in Dubai with Confidence.</div>
                     <div class="desc">
                         Lexium Business Hub is your trusted partner for company formation, Golden Visa, and corporate services in Dubai.
                         From business setup to banking, we simplify the process so you can focus on growth.
@@ -74,7 +74,7 @@
                     <a class="btn_link" href="#">View Services</a>
                     {{-- Why Dubai --}}
                     <div class="why_dubai">
-                        <div class="main_title" data-aos="fade-left">Why Dubai</div>
+                        <div class="main_title sft_font" data-aos="fade-left">Why Dubai</div>
                         <div class="black_bg grid">
                             <div class="col flex_col">
                                 <div class="circle" data-percent="50">
@@ -114,7 +114,7 @@
                     {{-- Why Dubai --}}
                     {{-- start Services --}}
                     <div class="services_col">
-                        <div class="main_title" data-aos="fade-left">Our Services</div>
+                        <div class="main_title sft_font" data-aos="fade-left">Our Services</div>
                         <div class="grid">
                             <div class="order_ser col">
                                 <div class="service">
@@ -210,7 +210,7 @@
                     <div class="flex_row">
                         <div class="text_container">
                             <div class="btn">About US </div>
-                            <div class="title" data-aos="fade-left">Businesses Through <span>Management</span></div>
+                            <div class="title sft_font" data-aos="fade-left">Businesses Through <span>Management</span></div>
                             <div class="desc">
                                 we specialize in providing comprehensive business management solutions
                                 tailored to meet the unique needs of our clients. With years of
@@ -256,7 +256,7 @@
                             <div class="btn">
                                 Testimonials
                             </div>
-                            <div class="main_title" data-aos="fade-left">
+                            <div class="main_title sft_font" data-aos="fade-left">
                              What They Say About<br>
                              <span>Our Company</span>
                             </div>
@@ -343,7 +343,7 @@
                             <div class="btn">
                                 Blog & News
                             </div>
-                            <div class="main_title" data-aos="fade-left">
+                            <div class="main_title sft_font" data-aos="fade-left">
                                 Recent blog post
 
                             </div>
@@ -441,7 +441,7 @@
                     <div class="newsletter">
                         <div class="flex_col">
                             <div class="btn">Subscribe Newsletter</div>
-                            <div class="title" data-aos="fade-left">Your Connection to All Things New Subscribe Now</div>
+                            <div class="title sft_font" data-aos="fade-left">Your Connection to All Things New Subscribe Now</div>
                             <div class="form_container">
                                 <form class="form_newsletter">
                                     <div class="input_container">

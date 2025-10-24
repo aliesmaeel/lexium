@@ -17,7 +17,7 @@
         </div>
         <div class="content content_details"> 
             <div class="text_desc_details">
-                <div class="title"> 
+                <div class="title sft_font"> 
                     Mainland vs Free Zone vs Offshore in Dubai (2025 Guide)
                 </div>
                 <div class="desc">

@@ -12,7 +12,7 @@
 <div class="contact_page business_page calculator_page">
     <div class="content">
         <div class="text_desc">
-            <div class="title" data-aos="fade-left">
+            <div class="title sft_font" data-aos="fade-left">
                 Calculate Your UAE Business Setup Cost
             </div>
         </div>

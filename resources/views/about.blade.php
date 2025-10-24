@@ -22,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title" data-aos="fade-left"> 
+                <div class="title sft_font" data-aos="fade-left"> 
                     Your Boutique Partner in Dubai Business Setup.
                 </div>
                 <div class="desc">

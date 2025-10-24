@@ -22,7 +22,7 @@
         </div>
         <div class="content"> 
             <div class="text_desc">
-                <div class="title" data-aos="fade-left"> 
+                <div class="title sft_font" data-aos="fade-left"> 
                     Comprehensive Corporate Services for Dubai Businesses.
                 </div>
                 <div class="desc">
@@ -84,10 +84,17 @@
                         <img src="/images/services_col.webp"/>
                     </div>
                 </div>
-                <div class="button">
+                <div class="button apply_btn">
                     <a class="btn_link">
                         Explore Corporate Services
                     </a>
+                </div>
+                <!-- Overlay -->
+                <div class="overlay"></div>
+
+                <!-- Popup -->
+                <div class="popup">
+                    @include('popup')
                 </div>
             </div>
         </div>
