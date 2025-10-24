@@ -34,14 +34,8 @@ Route::get('/industries', function () {
     return view('industries');
 })->name('industries');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
-
-
-Route::get('/blog_details', function () {
-    return view('blog_details');
-});
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.post');
 
 Route::get('/cost_calculator', function () {
     return view('cost_calculator');

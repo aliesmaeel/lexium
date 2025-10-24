@@ -10,7 +10,7 @@
                     </a>
                 </div>
                 <div class="flex_between">
-                    <a class="flex" href="#">
+                    <a class="flex" href="mailTo:info@lexium.com">
                         <img src="/images/email.png"/>
                         <span>info@lexium.com</span>
                     </a>

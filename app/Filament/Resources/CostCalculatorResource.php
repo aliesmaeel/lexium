@@ -103,6 +103,14 @@ class CostCalculatorResource extends Resource
                             $record->update(['is_read' => true]);
                         }
                     }),
+                Tables\Actions\Action::make('mark_unread')
+                    ->label('Mark as Unread')
+                    ->icon('heroicon-o-envelope')
+                    ->requiresConfirmation()
+                    ->visible(fn($record) => $record->is_read)
+                    ->action(function ($record) {
+                        $record->update(['is_read' => false]);
+                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

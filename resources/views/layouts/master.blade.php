@@ -11,13 +11,13 @@
         <link rel="stylesheet" href="/css/style.css?v={{ time() }}">
         <link rel="stylesheet" href="/css/respo.css?v={{ time() }}">
         <link rel="stylesheet" href="/css/swiper-bundle.min.css?v={{ time() }}">
-        <link rel="stylesheet" href="/css/aos.css?v={{ time() }}">  
+        <link rel="stylesheet" href="/css/aos.css?v={{ time() }}">
     </head>
     <body>
 
         @yield('header')
         @yield('content')
-        <a href="https://wa.me/1234567890" target="_blank" class="floating-circle">
+        <a href="https://wa.me/+971563148567" target="_blank" class="floating-circle">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
         </a>
         <div id="scroll-progress">
@@ -30,14 +30,14 @@
         @yield('footer')
         <script src="{{asset('js/jquery-3.6.1.min.js')}}"></script>
         <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
-        
+
         <script src="{{asset('js/app.js?v=0.8')}}"></script>
         <script src="{{asset('js/aos.js')}}"></script>
         <script>
             AOS.init({
                 duration: 900,
-                once: true, 
-               
+                once: true,
+
             });
         </script>
     </body>
