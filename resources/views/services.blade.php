@@ -12,21 +12,26 @@
 {{-- main page --}}
 @section('content')
     <div class="contact_page business_page services_page">
+        @if(session('success'))
+            <div class="alert alert-success" style=" text-align:center; background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="banner_contact">
             {{-- <img src="/images/banner_about.jpg"> --}}
             <img src="/images/bg1.png" class="one"/>
             <img src="/images/bg2.png" class="two"/>
             <img src="/images/bg3.png" class="three"/>
             <div class="main_title"> Corporate Services</div>
-            
+
         </div>
-        <div class="content"> 
+        <div class="content">
             <div class="text_desc">
-                <div class="title sft_font" data-aos="fade-left"> 
+                <div class="title sft_font" data-aos="fade-left">
                     Comprehensive Corporate Services for Dubai Businesses.
                 </div>
                 <div class="desc">
-                    Beyond setup, we provide ongoing support, 
+                    Beyond setup, we provide ongoing support,
                     so your company remains compliant and operational.
                 </div>
             </div>
@@ -40,23 +45,23 @@
                                 </div>
                                 <div class="text">
                                     <div class="title">
-                                    PRO Services 
+                                    PRO Services
                                     </div>
                                     <div class="desc">
                                         Visa renewals, labour cards, Emirates ID.
                                     </div>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
                         <div class="col" data-aos="fade-up">
-                            
+
                             <div class="flex_col">
                                 <div class=" icon">
                                     <img src="/images/document.png">
                                 </div>
                                 <div class="text">
                                     <div class="title">
-                                        Document Clearing 
+                                        Document Clearing
                                     </div>
                                     <div class="desc">
                                         Legal translations, attestations, approvals.
@@ -71,7 +76,7 @@
                                 </div>
                                 <div class="text">
                                     <div class="title">
-                                        Business Support 
+                                        Business Support
                                     </div>
                                     <div class="desc">
                                         License renewals, corporate structuring, admin support.

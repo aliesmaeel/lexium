@@ -420,10 +420,7 @@ $(document).ready(function () {
     $form.on("submit", function (e) {
         e.preventDefault();
         const $currentStep = $steps.eq(currentStep);
-        if (validateStep($currentStep)) {
-            $form.off("submit"); // ✅ prevent double submit
-            this.submit();
-        }
+        this.submit();
     });
 
 
@@ -438,7 +435,12 @@ $(document).ready(function () {
       });
   }
 
-
+    $(document).on('click', function (e) {
+        const phoneDropdown = $form.find('.dropdown_phone');
+        if (!$(e.target).closest('.phone_dropdown_wrapper, .dropdown_phone').length) {
+            phoneDropdown.hide();
+        }
+    });
   function populatePhoneDropdown(countries) {
       const phoneDropdown = $form.find('.dropdown_phone');
       const phoneInput = $form.find('#phone-input');
@@ -465,13 +467,16 @@ $(document).ready(function () {
 
       phoneInput.attr('placeholder', defaultCode);
       $form.find('.city_code').on('click', () => phoneDropdown.toggle());
+
       phoneDropdown.on('click', '.code', function () {
-        const flagSrc = $(this).data('flag');
-        selectedCode = $(this).data('code');
-        $form.find('#selected-flag').attr('src', flagSrc);
-        phoneInput.attr('placeholder', selectedCode);
-        phoneDropdown.hide();
-    });
+          const flagSrc = $(this).data('flag');
+          selectedCode = $(this).data('code');
+          $form.find('#selected-flag').attr('src', flagSrc);
+          phoneInput.attr('placeholder', selectedCode);
+          $form.find('#country_code').val(selectedCode); // ✅ Save the code
+          phoneDropdown.hide();
+      });
+
       phoneDropdown.on('input', '.dropdown-search', function () {
           const query = $(this).val().toLowerCase();
           phoneDropdown.find('.code').each(function () {

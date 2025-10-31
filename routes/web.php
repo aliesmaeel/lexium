@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/',[\App\Http\Controllers\HomePageController::class, 'index'])->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -41,8 +39,12 @@ Route::get('/cost_calculator', function () {
     return view('cost_calculator');
 });
 
+Route::post('/calculate-cost', [App\Http\Controllers\CostCalculatorController::class, 'calculate'])->name('calculate.cost');
+
 
 Route::get('/all-countries', [CountryController::class, 'getCountries']);
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::post('/contact-submit', [App\Http\Controllers\HomePageController::class, 'submit'])->name('contact.submit');

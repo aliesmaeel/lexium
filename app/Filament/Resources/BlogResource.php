@@ -23,9 +23,19 @@ class BlogResource extends Resource
     {
         return $form
             ->schema([
+                //make slug from title
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->reactive()
+                    ->afterStateUpdated(function (Forms\Get $get, Forms\Set $set, $state) {
+                        $set('slug', \Str::slug($state));
+                    })->lazy(),
+                //slug
+                Forms\Components\TextInput::make('slug')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true),
                 Forms\Components\RichEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
@@ -46,6 +56,9 @@ class BlogResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+                //slug
+                Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('author')
                     ->searchable(),

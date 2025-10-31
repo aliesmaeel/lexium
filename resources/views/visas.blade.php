@@ -9,10 +9,17 @@
     @include('layouts.header')
 @endsection
 
+
 {{-- main page --}}
 @section('content')
     <div class="contact_page visas_page">
+        @if(session('success'))
+            <div class="alert alert-success" style=" text-align:center; background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="banner_contact">
+
             {{-- <img src="/images/banner_about.jpg"> --}}
             <img src="/images/bg1.png" class="one"/>
             <img src="/images/bg2.png" class="two"/>

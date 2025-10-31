@@ -16,10 +16,15 @@
                 Calculate Your UAE Business Setup Cost
             </div>
         </div>
+        @if(session('success'))
+            <div class="alert alert-success" style="background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                {{ session('success') }}
+            </div>
+        @endif
 
         <div class="content_calculator">
-            <form id="setupForm" action="" method="">
-
+            <form id="setupForm" action="{{route('calculate.cost')}}" method="POST">
+                @csrf
                 {{-- Step 1 --}}
                 <div class="form-step active">
                     <div class="shadow_border" data-aos="fade-up">
@@ -29,7 +34,7 @@
                             this will also help you get a better estimate of the cost of your company setup.
                         </div>
                         <div class="input_container">
-                            <select name="activity" required>
+                            <select name="business_type" required>
                                 <option value="">Select</option>
                                 <option value="Consulting">Consulting</option>
                                 <option value="Technology">Technology</option>
@@ -86,7 +91,7 @@
                             This will help us determine the potential type of company structure you will need for your company.
                         </div>
                         <div class="input_container">
-                            <select name="location" required>
+                            <select name="company_reason" required>
                                 <option value="">Select</option>
                                 <option value="new_company_formation">New company formation</option>
                                 <option value="Expansion plan (ie. new branch or franchise)">Expansion plan (ie. new branch or franchise)</option>
@@ -124,7 +129,7 @@
                                 <button type="button" class="owner-btn" data-value="7">7</button>
                                 <button type="button" class="owner-btn" data-value="8">8</button>
                             </div>
-                            <input type="hidden" name="owners" required>
+                            <input type="hidden" name="company_owners" required>
                         </div>
                     </div>
                     <div class="buttons" data-aos="fade-up">
@@ -155,7 +160,7 @@
                                 <button type="button" class="owner-btn" data-value="6">6</button>
                                 <button type="button" class="owner-btn" data-value="7">7</button>
                             </div>
-                            <input type="hidden" name="visas" required>
+                            <input type="hidden" name="visas_required" required>
                         </div>
                     </div>
                     <div class="buttons" data-aos="fade-up">
@@ -214,19 +219,19 @@
                         <div class="input_container office_container p_1" data-name="business_plan">
                             <div class="office_buttons">
                                 <label class="office-btn">
-                                    <input type="radio" name="business_plan" value="This Month">
+                                    <input type="radio" name="start_date" value="This Month">
                                     <span>This Month</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="business_plan" value="Next Month">
+                                    <input type="radio" name="start_date" value="Next Month">
                                     <span>Next Month</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="business_plan" value="3 Month">
+                                    <input type="radio" name="start_date" value="3 Month">
                                     <span>3 Month</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="business_plan" value="6 Month">
+                                    <input type="radio" name="start_date" value="6 Month">
                                     <span>6 Month</span>
                                 </label>
 
@@ -250,11 +255,11 @@
                         <div class="input_container office_container p_1" data-name="preferred_jurisdiction">
                             <div class="office_buttons">
                                 <label class="office-btn">
-                                    <input type="radio" name="preferred_jurisdiction" value="Free Zone">
+                                    <input type="radio" name="jurisdiction" value="Free Zone">
                                     <span>Free Zone</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="preferred_jurisdiction" value="Mainland">
+                                    <input type="radio" name="jurisdiction" value="Mainland">
                                     <span>Mainland</span>
                                 </label>
                             </div>
@@ -273,11 +278,11 @@
                         <div class="input_container office_container p_1" data-name="living_UAE">
                             <div class="office_buttons">
                                 <label class="office-btn">
-                                    <input type="radio" name="living_UAE" value="yes">
+                                    <input type="radio" name="living_in_uae" value="yes">
                                     <span>Yes</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="living_UAE" value="no">
+                                    <input type="radio" name="living_in_uae" value="no">
                                     <span>No</span>
                                 </label>
                             </div>
@@ -296,11 +301,11 @@
                         <div class="input_container office_container p_1" data-name="visas_dependants">
                             <div class="office_buttons">
                                 <label class="office-btn">
-                                    <input type="radio" name="visas_dependants" value="yes">
+                                    <input type="radio" name="dependents_visas_needed" value="yes">
                                     <span>Yes</span>
                                 </label>
                                 <label class="office-btn">
-                                    <input type="radio" name="visas_dependants" value="no">
+                                    <input type="radio" name="dependents_visas_needed" value="no">
                                     <span>No</span>
                                 </label>
                             </div>
@@ -329,6 +334,7 @@
                 </div>
 
                 {{-- Step 11 --}}
+                {{-- Step 11 --}}
                 <div class="form-step info_form">
                     <div class="shadow_border" data-aos="fade-up">
                         <div class="title">Your business setup estimate is ready!</div>
@@ -340,9 +346,8 @@
                                 <div class="label">
                                     First name
                                 </div>
-                                <div class="input_container ">
-                                    <input type="text" placeholder="First name" First name/>
-
+                                <div class="input_container">
+                                    <input type="text" name="first_name" placeholder="First name" />
                                 </div>
                             </div>
                             <div class="col">
@@ -350,8 +355,7 @@
                                     Last name
                                 </div>
                                 <div class="input_container">
-                                    <input type="text" placeholder="Last name" name="Last name"/>
-
+                                    <input type="text" name="last_name" placeholder="Last name" />
                                 </div>
                             </div>
                             <div class="col col_span_2">
@@ -359,8 +363,7 @@
                                     Email
                                 </div>
                                 <div class="input_container">
-                                    <input type="email" name="email" placeholder="Email"/>
-
+                                    <input type="email" name="email" placeholder="Email" />
                                 </div>
                             </div>
                             <div class="col col_span_2">
@@ -369,10 +372,11 @@
                                     <div class="phone_dropdown_wrapper">
                                         <div class="city_code">
                                             <img id="selected-flag" src="https://flagcdn.com/w320/ae.png" alt="Flag" style="width: 20px; height: 15px;">
-                                            <img src="/images/arrow-down.png"/>
+                                            <img src="/images/arrow-down.png" />
                                         </div>
                                     </div>
-                                    <input type="text" name="phone_number" id="phone-input" placeholder="+971" class="phone_number"/>
+                                    <input type="text" name="phone" id="phone-input" placeholder="+971" class="phone_number" />
+                                    <input type="hidden" name="country_code" id="country_code" value="+971">
                                     <div class="dropdown_phone" style="display:none;"></div>
                                 </div>
                             </div>
@@ -383,6 +387,7 @@
                         <button type="submit" class="submit-btn">Get My Estimate</button>
                     </div>
                 </div>
+
             </form>
         </div>
     </div>

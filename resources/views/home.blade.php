@@ -349,86 +349,19 @@
                             </div>
                             <div class="swiper blogs_swiper">
                                 <div class="swiper-wrapper">
-                                    <!-- Slide 1 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
+                                   @foreach($blogs as $blog)
+                                        <div class="swiper-slide single_blog">
+                                            <div class="desc">
+                                                Business Solution / by  <span>{{$blog->author}}</span>
+                                            </div>
+                                            <a class="title_blog_single" href="{{url('/blog/'.$blog->slug)}}">{{$blog->title}}</a>
+                                            <div class="img_Container">
+                                                <img src="{{asset('/storage/'.$blog->image)}}" />
+                                            </div>
                                         </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 2 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 3 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                     <!-- Slide 4 -->
-                                     <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 5 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 5 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 5 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
-                                    <!-- Slide 5 -->
-                                    <div class="swiper-slide single_blog">
-                                        <div class="desc">
-                                            Business Solution / by  <span>David Dolean</span>
-                                        </div>
-                                        <a class="title_blog_single" href="#">Transforming Your Best Of Approach to Business</a>
-                                        <div class="img_Container">
-                                            <img src="/images/blog.webp" />
-                                        </div>
-                                    </div>
+                                   @endforeach
+
+
                                 </div>
                                 <!-- Pagination -->
                                 <div class="swiper-pagination"></div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -9,16 +10,17 @@ class BlogController extends Controller
 
     public function index()
     {
-        // Here you would typically fetch blog posts from the database
-        // For demonstration purposes, we'll just return a view
+        $blogs = \App\Models\Blog::all();
+        $blog_categories=Blog::select('category')->distinct()->get();
+        $recent_blogs = Blog::orderBy('created_at', 'desc')->take(5)->get();
 
-        return view('blog');
+        return view('blog', compact('blogs','blog_categories','recent_blogs'));
     }
     public function show($slug)
     {
-        // Here you would typically fetch the blog post from the database using the slug
-        // For demonstration purposes, we'll just return a view with the slug
+      $blog = \App\Models\Blog::where('slug', $slug)->firstOrFail();
 
-        return view('blog_details', ['slug' => $slug]);
+
+        return view('blog_details', compact('blog'));
     }
 }

@@ -71,7 +71,7 @@
 
                 </li>
                 <li class="main_list_mobile">
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                     <a href="/business">Business</a>
                     <a href="/visas">Visas & Residency</a>
                     <a href="/banking">Banking & Finance</a>

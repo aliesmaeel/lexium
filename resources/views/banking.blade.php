@@ -12,17 +12,22 @@
 {{-- main page --}}
 @section('content')
     <div class="contact_page banking_page">
+        @if(session('success'))
+            <div class="alert alert-success" style=" text-align:center; background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="banner_contact">
             {{-- <img src="/images/banner_about.jpg"> --}}
             <img src="/images/bg1.png" class="one"/>
             <img src="/images/bg2.png" class="two"/>
             <img src="/images/bg3.png" class="three"/>
             <div class="main_title"> Banking & Finance</div>
-            
+
         </div>
-        <div class="content"> 
+        <div class="content">
             <div class="text_desc">
-                <div class="title sft_font" data-aos="fade-left"> 
+                <div class="title sft_font" data-aos="fade-left">
                     Corporate Banking & Accounting Made Easy.
                 </div>
                 <div class="desc">
@@ -52,7 +57,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="button apply_btn">
                 <a class="btn_link">
                     Open Your Business Bank Account
